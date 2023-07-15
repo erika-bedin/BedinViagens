@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+        <img src="./img/logolimpa.png" alt="Logotipo da agência de viagens" width="100">
+        <img src="./img/bedinviagens.png" alt="Logotipo da Bedin viagens" width="300">
+          <a class="navbar-brand" href="./index.html"></a>            
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html">Início</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./destino.html">Destinos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pesquisa.html">Pesquisar</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./promocoes.html">Promoções</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="./contato.html">Contato</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  </header>    
+      <div class="container">
+        <h1 class="page-title">Entre em contato conosco</h1>
+        <form>
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" class="form-control" id="nome">
+            </div>
+            <div class="form-group">
+                <label for="cel">Celular:</label>
+                <input type="tel" class="form-control" id="cel">
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" class="form-control" id="email">
+            </div>            
+            <div class="form-group">
+                <label for="mensagem">Mensagem:</label>
+                <textarea class="form-control" id="mensagem" rows="5"></textarea>
+            </div>
+            <div class="form-group text-center">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+        </form>
+    </div>
+    <footer class="footer">
+      <span class="text-muted">Bedin Viagens © 2023. Todos os direitos reservados (fins educacionais).</span>
+    </footer>
+</body>
+</html>

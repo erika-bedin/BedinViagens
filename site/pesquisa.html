@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscar Viagens</title>  
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <header>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container">
+      <img src="./img/logolimpa.png" alt="Logotipo da agência de viagens" width="100">
+      <img src="./img/bedinviagens.png" alt="Logotipo da Bedin viagens" width="300">
+      <a class="navbar-brand" href="./index.html"></a>            
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">Início</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./destino.html">Destinos</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="./pesquisa.html">Pesquisar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./promocoes.html">Promoções</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contato.html">Contato</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  </header>    
+  <div class="container">
+    <h1 class="page-title">Pesquisar</h1>
+    <div class="search-form">      
+      <form action="/buscar" method="GET">        
+        <div class="form-group">
+          <label for="origem">Origem:</label>
+          <select id="origem" name="origem">
+              <option value="">Selecione a origem</option>
+              <option value="Acre">Acre</option>
+              <option value="Alagoas">Alagoas</option>
+              <option value="Amapá">Amapá</option>
+              <option value="Amazonas">Amazonas</option>
+              <option value="Bahia">Bahia</option>
+              <option value="Ceará">Ceará</option>
+              <option value="Distrito Federal">Distrito Federal</option>
+              <option value="Espírito Santo">Espírito Santo</option>
+              <option value="Goiás">Goiás</option>
+              <option value="Maranhão">Maranhão</option>
+              <option value="Mato Grosso">Mato Grosso</option>
+              <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+              <option value="Minas Gerais">Minas Gerais</option>
+              <option value="Pará">Pará</option>
+              <option value="Paraíba">Paraíba</option>
+              <option value="Paraná">Paraná</option>
+              <option value="Pernambuco">Pernambuco</option>
+              <option value="Piauí">Piauí</option>
+              <option value="Rio de Janeiro">Rio de Janeiro</option>
+              <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+              <option value="Rio Grande do Norte">Rio Grande do Norte</option>
+              <option value="Rondônia">Rondônia</option>
+              <option value="Roraima">Roraima</option>
+              <option value="Santa Catarina">Santa Catarina</option>
+              <option value="São Paulo">São Paulo</option>
+              <option value="Sergipe">Sergipe</option>
+              <option value="Tocantins">Tocantins</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="destino">Destino:</label>
+          <select id="destino" name="destino">
+            <option value="">Selecione o destino</option>
+            <option value="1">Porto de Galinhas - PE</option>
+            <option value="2">Fortaleza - CE</option>
+            <option value="3">Salvador - BA</option>
+            <option value="4">Manaus - AM</option>
+            <option value="5">Alter do Chão - PA</option>
+            <option value="6">Região Amazônica - AM</option>
+            <option value="7">Gramado - RS</option>
+            <option value="8">Florianópolis - SC</option>
+          </select>
+        </div>
+        <div class="form-group">          
+          <label for="datapartida">Data de Partida:</label>
+          <input type="date" id="datapartida" name="datapartida">
+        </div>
+        <div class="form-group">
+          <label for="datachegada">Data de Chegada:</label>
+          <input type="date" id="datachegada" name="datachegada">
+        </div>        
+        <div class="form-group">
+          <label for="pessoas">Quantidade de pessoas:</label>
+          <select id="pessoas" name="pessoas">
+            <option value="">Selecione a quantidade de pessoas</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">Mais de 7</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="cupom">Cupom de desconto:</label>
+          <input type="text" id="cupom" name="cupom" placeholder="Digite o cupom de desconto">
+        <div class="form-group text-center">
+          <button type="submit" class="btn btn-primary">Pesquisar</button>
+        </div>
+        </div>          
+      </form>
+    </div>
+  </div> 
+  <footer class="footer">
+    <span class="text-muted">Bedin Viagens © 2023. Todos os direitos reservados (fins educacionais).</span>
+  </footer> 
+</body>
+</html>
