@@ -39,25 +39,25 @@ body {
     padding: 0;
     background: url('./img/fundo\ site.jpg') no-repeat center center fixed;
     background-size: cover;
-  }
-  h2{
+}
+h2{
     color: #000000;
     text-shadow: 2px 2px 4px #0bded7;     
     margin-left: 150px;
     margin-right: 150px;
-  }    
-  .hero {
+}    
+.hero {
     text-align: center;
     margin-top: 20px;
-  }
-  .hero-title {
+}
+.hero-title {
     font-size: 48px;
     font-weight: bold;
     color: #ffffff;
     text-shadow: 2px 2px 4px #000000;
     margin-bottom: 20px;
-  }
-  .hero-image {
+}
+.hero-image {
     font-size: 48px;
     width: 100%;
     font-weight: bold;
@@ -65,59 +65,59 @@ body {
     text-shadow: 2px 2px 4px #000000;
     align-items: center;
     margin-bottom: 20px;
-  }
-  .hero-subtitle {
+}
+.hero-subtitle {
     font-size: 24px;
     color: #ffffff;
     text-shadow: 2px 2px 4px #000000;
     margin-bottom: 40px;
-  }
-  .btn {
+}
+.btn {
     font-size: 18px;
     font-weight: bold;
     align-items: center;
-  }
-  .featured-destinations {
+}
+.featured-destinations {
     margin-top: 50px;
     text-align: center;
-  }
-  .destination-card {
+}
+.destination-card {
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 20px;
     border-radius: 10px;
     background: linear-gradient(130deg, rgba(255, 150, 0, 0.5), rgba(255, 0, 165, 0.5), rgba(0,255,0,0.5), rgba(0,0,255,0.5));
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-  .destination-cardd {
+}
+.destination-cardd {
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 20px;
     border-radius: 10px;
     background: #ffffff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-  .destination-title {
+}
+.destination-title {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
     color: #ffffff;
     text-shadow: 2px 2px 4px #000000;
-  }
-  .destination-description {
+}
+.destination-description {
     margin-bottom: 20px;
-  }
-  .destination-button {
+}
+.destination-button {
     font-size: 16px;
     font-weight: bold;
-  }
-  .footer {
+}
+.footer {
     background-color: #333333;
     padding: 10px;
     text-align: center;
     width: 100%;
     margin-top: auto;
-  }
+}
 /*Pesquisa*/
 body {
     padding: 20px;
@@ -128,42 +128,42 @@ body {
     padding: 0;
     background: url('./img/fundo\ site.jpg') no-repeat center center fixed;
     background-size: cover;
-  }    
-  .page-title{
+}    
+.page-title{
     text-align: center;
     font-weight: bold;
     font-size: 40px;
     color: #ffffff; /* cor branca */
     text-shadow: 2px 2px 4px #000000; /* sombra do texto */
     margin-top: 10px; /* margem superior para separar do topo */
-  }
-  .search-form {
+}
+.search-form {
     margin: 20px auto;
     max-width: 500px;
     background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border-radius: 8px;
-  }
-  .search-form h2 {
+}
+.search-form h2 {
     text-align: center;
     margin-bottom: 20px;
-  }
-  .form-group label {
+}
+.form-group label {
     font-weight: bold;
-  }
-  .form-group input[type="text"],
-  .form-group select {
+}
+.form-group input[type="text"],
+.form-group select {
     align-items: center;
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-  }
-  .form-group button{
+}
+.form-group button{
     justify-content: center;
     align-items: center;
-  }
-  .btn-search,  {
+}
+.btn-search,  {
     align-items: center;
     width: 100%;
     padding: 10px;
@@ -174,16 +174,16 @@ body {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-  }
-  .btn-primary{
+}
+.btn-primary{
     padding: 10px;
     align-items: center;    
     cursor: pointer;
     display: inline;
     margin: 0 auto;
-  }
-  /*Promoções*/  
-  body {
+}
+/*Promoções*/  
+body {
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -252,47 +252,48 @@ body {
     padding: 10px;
 }
   /*Destino*/     
-    .destination-card {
-      margin-bottom: 20px;      
-    }
-    .card-img-top{
-      width: 100%;
-      /*width: 348px;
-      height: 205px;*/
-      padding-top: 10px;
-      padding-left: 10px;
-      padding-right: 10px;
+.destination-card {
+    margin-bottom: 20px;      
+}
+.card-img-top{
+    width: 100%;
+    /*width: 348px;
+    height: 205px;*/
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 
-    }
-    .page-title {
-      text-align: center;
-      font-weight: bold;
-      font-size: 40px;
-      color: #ffffff;
-      text-shadow: 2px 2px 4px #000000;
-      margin-top: 10px;
-    }
-    .regiao-title {
-      text-align: center;
-      font-weight: bold;
-      font-size: 30px;
-      color: #000000;
-      text-shadow: 2px 2px 4px #17a2b8;
-      margin-top: 10px;
-    }
-    .card-title {
-      text-align: center;
-    }
-    .card-text {
-      text-align: justify;
-    }
-    .text-center{
-      text-align: center;
-    }
-    .return-topo{
-      align-items: center;
-      text-align: center;
-      color: #ffffff;
-      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-      font-size: 12px;
-      margin-bottom: 10px;
+}
+.page-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px #000000;
+    margin-top: 10px;
+}
+.regiao-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: #000000;
+    text-shadow: 2px 2px 4px #17a2b8;
+    margin-top: 10px;
+}
+.card-title {
+    text-align: center;
+}
+.card-text {
+    text-align: justify;
+}
+.text-center{
+    text-align: center;
+}
+.return-topo{
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
