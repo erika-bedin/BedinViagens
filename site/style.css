@@ -111,8 +111,9 @@ h2{
     font-size: 16px;
     font-weight: bold;
 }
-.footer {
+.footer,.text-muted {
     background-color: #333333;
+    color: #ffffff; 
     padding: 10px;
     text-align: center;
     width: 100%;
