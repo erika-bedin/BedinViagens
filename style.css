@@ -54,7 +54,6 @@ h2{
     margin-top: 20px;
 }
 .hero-title {
-    font-size: 48px;
     font-weight: bold;
     color: #ffffff;
     text-shadow: 2px 2px 4px #000000;
@@ -70,6 +69,7 @@ h2{
     margin-bottom: 20px;
 }
 .hero-subtitle {
+    text-align: center;
     font-size: 24px;
     color: #ffffff;
     text-shadow: 2px 2px 4px #000000;
@@ -237,24 +237,33 @@ body {
     margin-top: 10px;  
     border: rgba(0, 255, 255,0.3) solid;
     border-radius: 5px;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 500px;
 }
 .inner-card-title {
     text-align: center;
     font-size: medium;
     margin-top: 10px;
+    align-items: center;
 }
 .inner-card-description {
-    text-align: justify;
+    text-align: center;
     margin-top: 10px;
+    align-items: center;
 }
 .inner-card-coupon {
     text-align: center;
     font-size: medium;
+    color: #000000;
     margin-top: 10px;
     margin-left: 50px;
     margin-right: 50px;
     font-weight: bold;
-    background-color: rgba(255, 255, 0,0.2);
+    width: 200px;
+    align-items: center;
+    background-color: rgba(255, 255, 0,0.6);
     padding: 10px;
 }
   /*Destino*/     
@@ -305,7 +314,7 @@ body {
 /* Estilos personalizados para o carrossel */
 .carousel-inner img {
     width: 100%;
-    max-height: 400px;
+    max-height: 450px;
     object-fit: cover;
 }
 
@@ -315,6 +324,9 @@ body {
     padding: 10px;
     border-radius: 5px;
     bottom: 20px;
+    width: auto;
+    align-items: center;
+    margin: 0 auto;
 }
 
   .carousel-caption h3 {
@@ -326,4 +338,12 @@ body {
   .carousel-caption p {
     font-size: 18px;
     margin-bottom: 0;
+}
+/* Centralizar o botão dentro do carrossel */
+.carousel-caption .btn {
+    margin-top: 10px; /* Ajuste o valor conforme necessário para espaçamento vertical */
+}
+/* Centralizar o cupom de desconto dentro do carrossel */
+.carousel-caption .inner-card-coupon {
+    margin: 0 auto; /* Isso centraliza horizontalmente o cupom de desconto */
 }
