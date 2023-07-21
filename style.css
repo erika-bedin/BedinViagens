@@ -11,7 +11,7 @@
     --teal: #20c997;
     --cyan: #17a2b8;
     --white: #fff;
-    --gray: #6c757d;
+    --gray: #75797c;
     --gray-dark: #343a40;
     --primary: #007bff;
     --secondary: #6c757d;
@@ -42,10 +42,13 @@ body {
 }
 h2{
     color: #000000;
-    text-shadow: 2px 2px 4px #0bded7;     
+    text-shadow: 2px 2px 4px #e83e8c;     
     margin-left: 150px;
     margin-right: 150px;
-}    
+} 
+.navbar-collapse {
+    justify-content:end;
+}
 .hero {
     text-align: center;
     margin-top: 20px;
@@ -81,21 +84,21 @@ h2{
     margin-top: 50px;
     text-align: center;
 }
-.destination-card {
+.destination-card, .search-form, .promotion-card {
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 20px;
     border-radius: 10px;
     background: linear-gradient(130deg, rgba(255, 150, 0, 0.5), rgba(255, 0, 165, 0.5), rgba(0,255,0,0.5), rgba(0,0,255,0.5));
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 .destination-cardd {
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 20px;
     border-radius: 10px;
-    background: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(130deg, rgba(255, 150, 0, 0.5), rgba(255, 0, 165, 0.5), rgba(0,255,0,0.5), rgba(0,0,255,0.5));
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 .destination-title {
     font-size: 24px;
@@ -111,9 +114,9 @@ h2{
     font-size: 16px;
     font-weight: bold;
 }
-.footer,.text-muted {
+.footer {
     background-color: #333333;
-    color: #ffffff; 
+    color: #b3b6b8; 
     padding: 10px;
     text-align: center;
     width: 100%;
@@ -151,6 +154,8 @@ body {
 }
 .form-group label {
     font-weight: bold;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px #e83e8c; /* sombra do texto */
 }
 .form-group input[type="text"],
 .form-group select {
@@ -227,7 +232,7 @@ body {
     margin-top: 20px;
 }
 .inner-card {
-    background-color: #f8f9fa;
+    background-color: rgba(255, 255, 255,0.5);
     padding: 10px;
     margin-top: 10px;  
     border: rgba(0, 255, 255,0.3) solid;
@@ -263,7 +268,6 @@ body {
     padding-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
-
 }
 .page-title {
     text-align: center;
@@ -297,4 +301,29 @@ body {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 12px;
     margin-bottom: 10px;
+}
+/* Estilos personalizados para o carrossel */
+.carousel-inner img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+  .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    bottom: 20px;
+}
+
+  .carousel-caption h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+  .carousel-caption p {
+    font-size: 18px;
+    margin-bottom: 0;
 }

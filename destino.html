@@ -2,10 +2,9 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
   <title>Destinos</title>  
   <link rel="stylesheet" href="/style.css">
-  <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">!-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 <body>
@@ -41,124 +40,140 @@
     </div>
   </nav> 
   </header>
-  <main>   
-  <div class="container">
-    <h1 class="page-title">Destinos</h1>    
-    <h2 class="regiao-title">Nordeste</h2>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card destination-cardd">
-          <img src="./img/PortoGalinhas1.jpg" class="card-img-top" alt="Imagem de Porto de Galinhas">
-          <div class="card-body text-center">
-            <h5 class="card-title">Porto de Galinhas</h5>
-            <p class="card-text">Localizada em Ipojuca, no estado de Pernambuco, Porto de Galinhas é famosa por 
-              suas belas praias e piscinas naturais de águas cristalinas.</p>
-            <a href="/pesquisa.html" class="btn btn-primary">Pesquisar</a>
+  <main>     
+    <div class="container mt-4">
+      <h1 class="text-center mb-4 page-title">Nordeste</h1>
+      <div id="carouselNordeste" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/img/PortoGalinhas1.jpg" class="d-block w-100" alt="Slide 1">
+            <div class="carousel-caption">
+              <h3>Porto de Galinhas</h3>
+              <p>Localizada em Ipojuca, no estado de Pernambuco, Porto de Galinhas é famosa por 
+                  suas belas praias e piscinas naturais de águas cristalinas.</p>
+              <a href="/pesquisa.html" class="btn btn-primary">Pesquisar</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/img/fortale.jpg" class="d-block w-100" alt="Slide 2">
+            <div class="carousel-caption">
+              <h3>Fortaleza</h3>
+              <p>Capital do estado do Ceará, Fortaleza é conhecida por suas praias paradisíacas, com águas cristalinas,
+                  como a Praia do Futuro e a Praia de Iracema.</p>
+              <a href="/pesquisa.html" class="btn btn-primary">Pesquisar</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/img/salvador.png" class="d-block w-100" alt="Slide 3">
+            <div class="carousel-caption">
+              <h3>Salvador</h3>
+              <p>A capital da Bahia é conhecida por sua rica cultura, culinária, música e suas 
+                  belas praias, como a Praia do Farol da Barra e a Praia do Flamengo.</p>
+              <a href="/pesquisa.html" class="btn btn-primary">Pesquisar</a>
+            </div>
           </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselNordeste" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselNordeste" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Próximo</span>
+        </button>
       </div>
-      <div class="col-md-4">
-        <div class="card destination-cardd">
-          <img src="./img/fortale.jpg" class="card-img-top" alt="Imagem de Fortaleza">
-          <div class="card-body text-center">
-            <h5 class="card-title">Fortaleza</h5>
-            <p class="card-text">Capital do estado do Ceará, Fortaleza é conhecida por suas praias paradisíacas, 
-              como a Praia do Futuro e a Praia de Iracema.</p>
-            <a href="/pesquisa.html" class="btn btn-primary">Pesquisar</a>
+    </div>
+    <div class="container mt-4">
+      <h1 class="text-center mb-4 page-title">Norte</h1>
+      <div id="carouselNorte" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/img/manauss.jpg" class="d-block w-100" alt="Slide 1">
+            <div class="carousel-caption">
+              <h3>Manaus</h3>
+              <p>Localizada no coração da Floresta Amazônica, Manaus é conhecida por seu patrimônio 
+                  histórico e cultural, além de ser a porta de entrada para a selva amazônica.</p>
+              <a href="/pesquisa.html" class="btn btn-primary">Pesquisar</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/img/alterchao.jpg" class="d-block w-100" alt="Slide 2">
+            <div class="carousel-caption">
+              <h3>Alter do Chão</h3>
+              <p>Conhecida como o "Caribe Amazônico", Alter do Chão é um paraíso de águas doces e areias 
+                  brancas, situado às margens do Rio Tapajós, no Pará.</p>
+              <a href="/pesquisa.html" class="btn btn-primary">Pesquisar</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/img/amazonas.jpg" class="d-block w-100" alt="Slide 3">
+            <div class="carousel-caption">
+              <h3>Amazonas</h3>
+              <p>A região amazônica oferece experiências únicas, como passeios de barco pelo Rio Negro, 
+                  caminhadas na floresta e encontro com comunidades indígenas.</p>
+              <a href="/pesquisa.html" class="btn btn-primary">Pesquisar</a>
+            </div>
           </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselNorte" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselNorte" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Próximo</span>
+        </button>
       </div>
-      <div class="col-md-4">
-        <div class="card destination-cardd">
-          <img src="./img/salvador.png" class="card-img-top" alt="Imagem de Salvador">
-          <div class="card-body text-center">
-            <h5 class="card-title">Salvador</h5>
-            <p class="card-text">A capital da Bahia é conhecida por sua rica cultura, culinária, música e suas 
-              belas praias, como a Praia do Farol da Barra e a Praia do Flamengo.</p>
-            <a href="/pesquisa.html" class="btn btn-primary">Pesquisar</a>
+    </div>
+    <div class="container mt-4">
+      <h1 class="text-center mb-4 page-title">Sul</h1>
+      <div id="carouselSul" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/img/gramado.jpg" class="d-block w-100" alt="Slide 1">
+            <div class="carousel-caption">
+              <h3>Gramado</h3>
+              <p>Localizada na Serra Gaúcha, Gramado é conhecida por seu clima europeu, paisagens 
+                  encantadoras, arquitetura charmosa, gastronomia e eventos culturais.</p>
+              <a href="/pesquisa.html" class="btn btn-primary">Pesquisar</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/img/floripa.jpeg" class="d-block w-100" alt="Slide 2">
+            <div class="carousel-caption">
+              <h3>Florianópolis</h3>
+              <p>A capital de Santa Catarina é conhecida por suas belas praias, como a Praia da 
+                  Joaquina, a Praia dos Ingleses e a Praia Mole, além da Lagoa da Conceição.</p>
+              <a href="/pesquisa.html" class="btn btn-primary">Pesquisar</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/img/curitiba2.jpg" class="d-block w-100" alt="Slide 3">
+            <div class="carousel-caption">
+              <h3>Curitiba</h3>
+              <p>A capital do Paraná é conhecida por seu planejamento urbano, seus parques, como o 
+                  Jardim Botânico e o Parque Barigui, e por sua rica cultura e gastronomia.</p>
+              <a href="/pesquisa.html" class="btn btn-primary">Pesquisar</a>
+            </div>
           </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselSul" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselSul" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Próximo</span>
+        </button>
       </div>
-    </div>    
-    <h2 class="regiao-title">Norte</h2>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card destination-cardd">
-          <img src="./img/manauss.jpg" class="card-img-top" alt="Imagem de Manaus">
-          <div class="card-body text-center">
-            <h5 class="card-title">Manaus</h5>
-            <p class="card-text">Localizada no coração da Floresta Amazônica, Manaus é conhecida por seu patrimônio 
-              histórico e cultural, além de ser a porta de entrada para a selva amazônica.</p>
-            <a href="/pesquisa.html" class="btn btn-primary">Pesquisar</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card destination-cardd">
-          <img src="./img/alterchao.jpg" class="card-img-top" alt="Imagem de Alter do Chão">
-          <div class="card-body text-center">
-            <h5 class="card-title">Alter do Chão</h5>
-            <p class="card-text">Conhecida como o "Caribe Amazônico", Alter do Chão é um paraíso de águas doces e areias 
-              brancas, situado às margens do Rio Tapajós, no Pará.</p>
-            <a href="/pesquisa.html" class="btn btn-primary">Pesquisar</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card destination-cardd">
-          <img src="./img/amazonas.jpg" class="card-img-top" alt="Imagem de Amazonas">
-          <div class="card-body text-center">
-            <h5 class="card-title">Região Amazônica</h5>
-            <p class="card-text">A região amazônica oferece experiências únicas, como passeios de barco pelo Rio Negro, 
-              caminhadas na floresta e encontro com comunidades indígenas.</p>
-            <a href="/pesquisa.html" class="btn btn-primary">Pesquisar</a>
-          </div>
-        </div>
-      </div>
-    </div>    
-    <h2 class="regiao-title">Sul</h2>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card destination-cardd">
-          <img src="./img/gramado.jpg" class="card-img-top" alt="Imagem de Gramado">
-          <div class="card-body text-center">
-            <h5 class="card-title">Gramado</h5>
-            <p class="card-text">Localizada na Serra Gaúcha, Gramado é conhecida por seu clima europeu, paisagens 
-              encantadoras, arquitetura charmosa, gastronomia e eventos culturais.</p>
-            <a href="/pesquisa.html" class="btn btn-primary">Pesquisar</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card destination-cardd">
-          <img src="./img/floripa.jpeg" class="card-img-top" alt="Imagem de Florianópolis">
-          <div class="card-body text-center">
-            <h5 class="card-title">Florianópolis</h5>
-            <p class="card-text">A capital de Santa Catarina é conhecida por suas belas praias, como a Praia da 
-              Joaquina, a Praia dos Ingleses e a Praia Mole, além da Lagoa da Conceição.</p>
-            <a href="/pesquisa.html" class="btn btn-primary">Pesquisar</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card destination-cardd">
-          <img src="./img/curitiba2.jpg" class="card-img-top" alt="Imagem de Curitiba">
-          <div class="card-body text-center">
-            <h5 class="card-title">Curitiba</h5>
-            <p class="card-text">A capital do Paraná é conhecida por seu planejamento urbano, seus parques, como o 
-              Jardim Botânico e o Parque Barigui, e por sua rica cultura e gastronomia.</p>
-            <a href="/pesquisa.html" class="btn btn-primary">Pesquisar</a>
-          </div>
-        </div>
-      </div>
-    </div>    
-  </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <div class="text-center">
     <a class="return-topo btn btn-primary" href="#topo">Voltar ao topo da página</a>
   </div>  
   </main>
   <footer class="footer">
-    <span class="text-muted">Bedin Viagens © 2023. Todos os direitos reservados (fins educacionais).</span>
+    <a href="https://github.com/erika-bedin">Bedin Viagens</a> © 2023. Todos os direitos reservados (fins educacionais).
   </footer>
 </body>
 </html>
