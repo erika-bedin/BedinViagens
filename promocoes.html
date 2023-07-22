@@ -28,8 +28,8 @@
               <li class="nav-item">
                 <a class="nav-link" href="/pesquisa.html">Pesquisar</a>
               </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="/promocoes.html">Promoções</a>
+              <li class="nav-item">
+                <a class="nav-link active" href="/promocoes.html">Promoções</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/contato.html">Contato</a>
@@ -41,7 +41,7 @@
   </header> 
   <main>   
     <div class="container mt-4">
-      <h1 class="text-center mb-4 page-title">Promoções</h1>
+      <h1 class="text-center mb-8 page-title">Promoções</h1>
       <div id="carouselpromo" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -50,31 +50,32 @@
               <h3>Nordeste</h3>
               <p>Aproveite os destinos paradisíacos do nordeste para curtir e 
                 relaxar. São lugares como: Porto de Galinhas, Fortaleza e Salvador.</p>
+              <p>Use o código do cupom abaixo na pesquisa e garanta 15% de desconto.</p>
                 <div class="inner-card text-center">
                   <h5 class="inner-card-title">Inclui:</h5>
                   <p class="inner-card-description">✈︎ 7 dias e 6 noites em resorts de luxo;</p>
                   <p class="inner-card-description">✈︎ Passagens aéreas de ida e volta;</p>
                   <p class="inner-card-description">✈︎ Alimentação e bebidas inclusas.</p>
-                  <h5 class="inner-card-coupon">Cupom: NORDESTE15</h5>
+                  <button class="inner-card-coupon" onclick="copyToClipboard(event)">NORDESTE15</button>
               </div>
-              <a href="/destino.html" class="btn btn-primary">Aproveite a promoção agora</a>
+              <a href="/pesquisa.html" class="btn btn-warning">Aproveite a promoção agora</a>
             </div>
           </div>
           <div class="carousel-item">
             <img src="/img/norte.jpeg" class="d-block w-100" alt="Slide 2">
             <div class="carousel-caption">
               <h3>Norte</h3>
-              Conheça incríveis destinos de ecoturismo na região Norte 
-                    para você conhecer. São lugares como: Manaus, Alter 
-                    do Chão e Amazonas.</p>
+              <p>Conheça incríveis destinos de ecoturismo na região Norte para você conhecer. São lugares como: 
+                Manaus, Alter do Chão e Amazonas.</p>
+              <p>Use o código do cupom abaixo na pesquisa e garanta 10% de desconto.</p>
                 <div class="inner-card text-center">
                     <h5 class="inner-card-title">Inclui:</h5>
                     <p class="inner-card-description">✈︎ Passeios em florestas tropicais;</p>
                     <p class="inner-card-description">✈︎ Hospedagem em hotéis ecológicos;</p>
                     <p class="inner-card-description">✈︎ Guia turístico especializado.</p>
-                    <h5 class="inner-card-coupon">Cupom: NORTE10</h5>
+                    <button class="inner-card-coupon" onclick="copyToClipboard(event)">NORTE10</button>
                 </div>                
-                <a href="/destino.html" class="btn btn-primary">Aproveite a promoção agora</a>
+                <a href="/pesquisa.html" class="btn btn-warning">Aproveite a promoção agora</a>
             </div>
           </div>
           <div class="carousel-item">
@@ -84,14 +85,15 @@
               <p class="card-text">Praias paradisíacas, cânions e cidadezinhas cheias de charme 
                 para você conhecer na região Sul, como: Gramado, 
                 Florianópolis e Curitiba.</p>
+              <p>Use o código do cupom abaixo na pesquisa e garanta 10% de desconto.</p>
             <div class="inner-card text-center">
                 <h5 class="inner-card-title">Inclui:</h5>
                 <p class="inner-card-description">✈︎ Roteiro personalizado;</p>
                 <p class="inner-card-description">✈︎ Transporte e guia turístico;</p>
                 <p class="inner-card-description">✈︎ Hospedagem em hotéis de qualidade.</p>
-                <h5 class="inner-card-coupon">Cupom: SUL10</h5>
+                <button class="inner-card-coupon" onclick="copyToClipboard(event)">SUL10</button>
             </div>
-            <a href="/destino.html" class="btn btn-primary">Aproveite a promoção agora</a>
+            <a href="/pesquisa.html" class="btn btn-warning">Aproveite a promoção agora</a>
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselpromo" data-bs-slide="prev">
@@ -105,6 +107,31 @@
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Função para copiar o conteúdo do cupom para a área de transferência
+      function copyToClipboard(event) {
+        const couponText = event.target.textContent;
+        const tempInput = document.createElement('textarea');
+        tempInput.style.position = 'fixed';
+        tempInput.style.opacity = 0;
+        tempInput.value = couponText;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempInput);
+
+        // Adicionar classe para mostrar feedback visual do botão copiado
+        event.target.classList.add('copied');
+
+        // Exibir alerta informando que o conteúdo foi copiado
+        alert('Cupom de desconto copiado: ' + couponText);
+
+        // Remover classe após 1 segundo
+        setTimeout(() => {
+          event.target.classList.remove('copied');
+        }, 1000);
+        }      
+    </script>
     </div>    
   </main>   
   <footer class="footer">
