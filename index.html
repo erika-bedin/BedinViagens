@@ -45,7 +45,16 @@
   </div>
   <div class="container mt-4">
     <h1 class="text-center mb-4 page-title"></h1>
-    <div id="carouselhome" class="carousel slide carousel-fade" data-bs-ride="carousel">     
+    <div id="carouselhome" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <!-- traços marcadores -->
+      <div class="carousel-indicators">
+        <!-- primeiro marcador (ativo por padrão) -->  
+        <button type="button" data-bs-target="#carouselhome" data-bs-slide-to="0" class="active" aria-11 current="true" aria-label="Slide 1"></button>
+        <!-- segundo marcador: link imagem 2 -->  
+        <button type="button" data-bs-target="#carouselhome" data-bs-slide-to="1" aria-label="Slide 2"></button>  
+        <!-- terceiro marcador: link imagem 3 -->  
+        <button type="button" data-bs-target="#carouselhome" data-bs-slide-to="2" aria-label="Slide 3"></button>  
+        </div>        
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img src="/img/destinos.jpeg.jpeg" class="d-block w-100" alt="Slide 1">
@@ -73,7 +82,7 @@
             <a href="/pesquisa.html" class="btn btn-primary">Saiba mais</a>
           </div>
         </div>
-      </div>      
+      </div>        
       <!-- Botões de navegação do carrossel -->
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselhome" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>

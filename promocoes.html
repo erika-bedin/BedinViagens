@@ -43,6 +43,15 @@
     <div class="container mt-4">
       <h1 class="text-center mb-8 page-title">Promoções</h1>
       <div id="carouselpromo" class="carousel slide" data-bs-ride="carousel">
+        <!-- traços marcadores -->
+        <div class="carousel-indicators">
+          <!-- primeiro marcador (ativo por padrão) -->  
+          <button type="button" data-bs-target="#carouselpromo" data-bs-slide-to="0" class="active" aria-11 current="true" aria-label="Slide 1"></button>
+          <!-- segundo marcador: link imagem 2 -->  
+          <button type="button" data-bs-target="#carouselpromo" data-bs-slide-to="1" aria-label="Slide 2"></button>  
+          <!-- terceiro marcador: link imagem 3 -->  
+          <button type="button" data-bs-target="#carouselpromo" data-bs-slide-to="2" aria-label="Slide 3"></button>  
+        </div>    
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="/img/nordeste.jpg" class="d-block w-100" alt="Slide 1">
@@ -56,8 +65,31 @@
                   <p class="inner-card-description">✈︎ 7 dias e 6 noites em resorts de luxo;</p>
                   <p class="inner-card-description">✈︎ Passagens aéreas de ida e volta;</p>
                   <p class="inner-card-description">✈︎ Alimentação e bebidas inclusas.</p>
-                  <button class="inner-card-coupon" onclick="copyToClipboard(event)">NORDESTE15</button>
-              </div>
+                  <!-- Botão de ativação -->
+                  <button class="inner-card-coupon" onclick="copyToClipboard(event)" data-bs-toggle="modal" data-bs-target="#modal-nordeste">NORDESTE15</button>
+                  <!-- Modal – inclui fundo semitransparente -->
+                  <div class="modal fade" id="modal-nordeste" tabindex="-1">
+                  <!-- caixa de diálogo -->
+                  <div class="modal-dialog">
+                  <!-- conteúdo do modal -->
+                  <div class="modal-content">
+                  <!-- cabeçalho do modal -->
+                  <div class="modal-header">
+                  <h5 class="modal-title" id="titulo-modal">Tudo certo!</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> <!-- botão fechar: x -->
+                  </div>
+                  <!-- corpo do modal -->
+                  <div class="modal-body">
+                  Cupom de desconto "NORDESTE15" copiado com sucesso. <br> Não se esqueça de colar o cupom na pesquisa para garantir seu desconto!
+                  </div>
+                  <!-- rodapé do modal -->
+                  <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button><!-- botão fechar -->
+                  </div>
+                  </div> <!-- /modal-content -->
+                  </div> <!-- /modal-dialog -->
+                  </div> <!-- /modal -->
+                </div>
               <a href="/pesquisa.html" class="btn btn-warning">Aproveite a promoção agora</a>
             </div>
           </div>
@@ -69,11 +101,34 @@
                 Manaus, Alter do Chão e Amazonas.</p>
               <p>Use o código do cupom abaixo na pesquisa e garanta 10% de desconto.</p>
                 <div class="inner-card text-center">
-                    <h5 class="inner-card-title">Inclui:</h5>
-                    <p class="inner-card-description">✈︎ Passeios em florestas tropicais;</p>
-                    <p class="inner-card-description">✈︎ Hospedagem em hotéis ecológicos;</p>
-                    <p class="inner-card-description">✈︎ Guia turístico especializado.</p>
-                    <button class="inner-card-coupon" onclick="copyToClipboard(event)">NORTE10</button>
+                  <h5 class="inner-card-title">Inclui:</h5>
+                  <p class="inner-card-description">✈︎ Passeios em florestas tropicais;</p>
+                  <p class="inner-card-description">✈︎ Hospedagem em hotéis ecológicos;</p>
+                  <p class="inner-card-description">✈︎ Guia turístico especializado.</p>
+                  <!-- Botão de ativação -->
+                  <button class="inner-card-coupon" onclick="copyToClipboard(event)" data-bs-toggle="modal" data-bs-target="#modal-norte">NORTE10</button>
+                  <!-- Modal – inclui fundo semitransparente -->
+                  <div class="modal fade" id="modal-norte" tabindex="-1">
+                  <!-- caixa de diálogo -->
+                  <div class="modal-dialog">
+                  <!-- conteúdo do modal -->
+                  <div class="modal-content">
+                  <!-- cabeçalho do modal -->
+                  <div class="modal-header">
+                  <h5 class="modal-title" id="titulo-modal">Tudo certo!</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> <!-- botão fechar: x -->
+                  </div>
+                  <!-- corpo do modal -->
+                  <div class="modal-body">
+                  Cupom de desconto "NORTE10" copiado com sucesso. <br> Não se esqueça de colar o cupom na pesquisa para garantir seu desconto!
+                  </div>
+                  <!-- rodapé do modal -->
+                  <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button><!-- botão fechar -->
+                  </div>
+                  </div> <!-- /modal-content -->
+                  </div> <!-- /modal-dialog -->
+                  </div> <!-- /modal -->
                 </div>                
                 <a href="/pesquisa.html" class="btn btn-warning">Aproveite a promoção agora</a>
             </div>
@@ -82,20 +137,42 @@
             <img src="/img/sul.jpg" class="d-block w-100" alt="Slide 3">
             <div class="carousel-caption">
               <h3>Sul</h3>
-              <p class="card-text">Praias paradisíacas, cânions e cidadezinhas cheias de charme 
-                para você conhecer na região Sul, como: Gramado, 
+              <p>Praias paradisíacas, cânions e cidadezinhas cheias de charme para você conhecer, como: Gramado, 
                 Florianópolis e Curitiba.</p>
               <p>Use o código do cupom abaixo na pesquisa e garanta 10% de desconto.</p>
-            <div class="inner-card text-center">
-                <h5 class="inner-card-title">Inclui:</h5>
-                <p class="inner-card-description">✈︎ Roteiro personalizado;</p>
-                <p class="inner-card-description">✈︎ Transporte e guia turístico;</p>
-                <p class="inner-card-description">✈︎ Hospedagem em hotéis de qualidade.</p>
-                <button class="inner-card-coupon" onclick="copyToClipboard(event)">SUL10</button>
+                <div class="inner-card text-center">
+                  <h5 class="inner-card-title">Inclui:</h5>
+                  <p class="inner-card-description">✈︎ Roteiro personalizado;</p>
+                  <p class="inner-card-description">✈︎ Transporte e guia turístico;</p>
+                  <p class="inner-card-description">✈︎ Hotéis de qualidade.</p>     
+                  <!-- Botão de ativação -->
+                  <button class="inner-card-coupon" onclick="copyToClipboard(event)" data-bs-toggle="modal" data-bs-target="#modal-sul">SUL10</button>
+                  <!-- Modal – inclui fundo semitransparente -->
+                  <div class="modal fade" id="modal-sul" tabindex="-1">
+                  <!-- caixa de diálogo -->
+                  <div class="modal-dialog">
+                  <!-- conteúdo do modal -->
+                  <div class="modal-content">
+                  <!-- cabeçalho do modal -->
+                  <div class="modal-header">
+                  <h5 class="modal-title" id="titulo-modal">Tudo certo!</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> <!-- botão fechar: x -->
+                  </div>
+                  <!-- corpo do modal -->
+                  <div class="modal-body">
+                  Cupom de desconto "SUL10" copiado com sucesso. <br> Não se esqueça de colar o cupom na pesquisa para garantir seu desconto!
+                  </div>
+                  <!-- rodapé do modal -->
+                  <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button><!-- botão fechar -->
+                  </div>
+                  </div> <!-- /modal-content -->
+                  </div> <!-- /modal-dialog -->
+                  </div> <!-- /modal -->
+                </div>
+                <a href="/pesquisa.html" class="btn btn-warning">Aproveite a promoção agora</a>
             </div>
-            <a href="/pesquisa.html" class="btn btn-warning">Aproveite a promoção agora</a>
           </div>
-        </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselpromo" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Anterior</span>
@@ -122,16 +199,13 @@
 
         // Adicionar classe para mostrar feedback visual do botão copiado
         event.target.classList.add('copied');
-
-        // Exibir alerta informando que o conteúdo foi copiado
-        alert('Cupom de desconto copiado: ' + couponText);
-
+      
         // Remover classe após 1 segundo
         setTimeout(() => {
           event.target.classList.remove('copied');
         }, 1000);
         }      
-    </script>
+    </script>-->
     </div>    
   </main>   
   <footer class="footer">

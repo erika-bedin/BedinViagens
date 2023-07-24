@@ -97,7 +97,7 @@ h2{
     margin-bottom: 20px;
     padding: 20px;
     border-radius: 10px;
-    background: linear-gradient(130deg, rgba(255, 150, 0, 0.5), rgba(255, 0, 165, 0.5), rgba(0,255,0,0.5), rgba(0,0,255,0.5));
+    background: url('./img/fundo\ site.jpg') no-repeat center center fixed;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 .destination-cardd {
@@ -176,6 +176,20 @@ body {
 .form-group button{
     justify-content: center;
     align-items: center;
+}
+.form-group .text-center{
+    font-size: 15px;
+    font-stretch: expanded;
+    font-weight: bolder;    
+}
+.form-text-lgpd{
+    font-size: 15px;
+    font-weight: bolder; 
+    margin-top: 2%;
+    margin-bottom: 0%;
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: rgba(255, 255, 255, 0.4);
 }
 .btn-search,  {
     align-items: center;
@@ -280,7 +294,10 @@ body {
 .inner-card-coupon.copied {
     background-color: rgba(255, 255, 0, 1);
     /* Outros estilos para realçar visualmente o botão copiado */
-  }
+}
+.modal-title, .modal-body{
+    color: #000000;
+}
   /*Destino*/     
 .destination-card {
     margin-bottom: 20px;      
@@ -331,6 +348,8 @@ body {
     width: 100%;
     max-height: 450px;
     object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 5px;
 }
 .carousel-caption {
     background-color: rgba(0, 0, 0, 0.7);
