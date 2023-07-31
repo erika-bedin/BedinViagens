@@ -4,48 +4,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bedin Viagens</title>
-  <link rel="stylesheet" href="/style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-ScQQEQsZq3MlQV57C3jmS6bKHz10kVXQ4kn9keMeirUNL2RtxbVJ3qoEWhqV5x5BZ9vrBdVVX+tn2Z8DFEmWw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/style.css">  
 </head>
 <body>
   <header>
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark">    
-    <div class="container">
-        <img src="./img/logolimpa.png" alt="Logotipo da agência de viagens" width="100">
-        <img src="./img/bedinviagens.png" alt="Logotipo da Bedin viagens" width="300">
-      <a class="navbar-brand" href="/index.html"></a>            
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link active" href="/index.html">Início</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/destino.html">Destinos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/pesquisa.html">Pesquisar</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/promocoes.html">Promoções</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/contato.html">Contato</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>   
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">    
+      <div class="container">
+          <img src="./img/logolimpa.png" alt="Logotipo da agência de viagens" width="100">
+          <img src="./img/bedinviagens.png" alt="Logotipo da Bedin viagens" width="300">
+        <a class="navbar-brand" href="/index.html"></a>   
+        <div class="btn-group mx-2 ms-auto" role="group" aria-label="Basic radio toggle button group">
+          <input type="radio" class="btn-check" name="btnradio" id="btnClaro" autocomplete="off">
+          <label class="btn btn-outline-secondary" for="btnClaro">🌞</label>
+          <input type="radio" class="btn-check" name="btnradio" id="btnEscuro" autocomplete="off">
+          <label class="btn btn-outline-secondary" for="btnEscuro">🌚</label>
+        </div>         
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>        
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="/index.html">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/destino.html">Destinos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pesquisa.html">Pesquisar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/promocoes.html">Promoções</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contato.html">Contato</a>
+            </li>
+          </ul>
+        </div>        
+      </div>      
+    </nav>  
   </header> 
   <main>
   <div class="container hero">
-    <h1 class="hero-title">Bem-vindo</h1>     
+    <h1 class="hero-title hidden">Bem-vindo</h1>     
   </div>
   <div class="container mt-4">
     <h1 class="text-center mb-4 page-title"></h1>
-    <div id="carouselhome" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div id="carouselhome" class="carousel slide carousel-fade hidden" data-bs-ride="carousel">
       <!-- traços marcadores -->
       <div class="carousel-indicators">
         <!-- primeiro marcador (ativo por padrão) -->  
@@ -58,28 +65,27 @@
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img src="/img/destinos.jpeg.jpeg" class="d-block w-100" alt="Slide 1">
-          <div class="carousel-caption">
-            <h3>Promoções imperdíveis</h3>
-            <p>Aproveite nossas promoções e relaxe em meio a vegetação ou em praias paradisíacas, 
-              com águas cristalinas e areias brancas.</p>
-            <a href="/promocoes.html" class="btn btn-primary">Saiba mais</a>
+          <div class="carousel-caption-sm">
+            <h3 class="text-sm">Promoções imperdíveis</h3>
+            <p class="text-sm">Relaxe em meio a vegetação ou em praias paradisíacas, com areias brancas e águas cristalinas.</p><br>
+            <a href="/promocoes.html" class="btn btn-primary btn-sm">Saiba mais</a>
           </div>
         </div>
         <div class="carousel-item">
           <img src="/img/expedicao2.png" class="d-block w-100" alt="Slide 2">
-          <div class="carousel-caption">
-            <h3>Expedição na Amazônia</h3>
-            <p>Aventure-se na maior floresta tropical do mundo, conheça a fauna e a flora únicas. 
-              Passeie de barco pelo Rio Negro.</p>
-            <a href="/destino.html#norte" class="btn btn-primary">Saiba mais</a>
+          <div class="carousel-caption-sm">
+            <h3 class="text-sm">Expedição na Amazônia</h3>
+            <p class="text-sm">Aventure-se na maior floresta tropical do mundo, conheça a fauna e a flora únicas. 
+              Passeie de barco pelo Rio Negro.</p><br>
+            <a href="/destino.html#norte" class="btn btn-primary btn-sm">Saiba mais</a>
           </div>
         </div>
         <div class="carousel-item">
           <img src="/img/ferias.jpeg" class="d-block w-100" alt="Slide 3">
-          <div class="carousel-caption">
-            <h3>Tá de férias?</h3>
-            <p>Bora viajar! Faça uma pesquisa rápida e encontre o pacote perfeito para não se preocupar com mais nada.</p>
-            <a href="/pesquisa.html" class="btn btn-primary">Saiba mais</a>
+          <div class="carousel-caption-sm">
+            <h3 class="text-sm">Tá de férias?</h3>
+            <p class="text-sm">Bora viajar! Faça uma pesquisa rápida e encontre o pacote perfeito para não se preocupar com mais nada.</p><br>
+            <a href="/pesquisa.html" class="btn btn-primary btn-sm">Saiba mais</a>
           </div>
         </div>
       </div>        
@@ -95,9 +101,63 @@
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>  
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      setTimeout(function() {
+        var heroTitle = document.querySelector(".hero-title");
+        heroTitle.classList.remove("hidden");
+        heroTitle.classList.add("zoom-in");
+      }, 500); // 500ms após o carregamento da página
+  
+      setTimeout(function() {
+        var carousel = document.querySelector("#carouselhome");
+        carousel.classList.remove("hidden");
+        carousel.classList.add("zoom-in");
+      }, 1000); // 1000ms após o carregamento da página
+    });
+  </script>  
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // ... (restante do seu código JavaScript) ...
+    });
+
+    // Função para alternar o tema
+    function alternarTema(tema) {
+      const body = document.body;
+      const navbar = document.querySelector('.navbar');
+      const footer = document.querySelector('.footer');
+
+      if (tema === 'claro') {
+        body.classList.remove('theme-dark'); // Remover a classe do tema dark do body
+        navbar.setAttribute('class', 'navbar navbar-expand-lg navbar-light bg-light'); // Altera a classe da navegação para o tema claro
+        footer.classList.remove('footer-dark'); // Remove a classe escura do footer
+        footer.classList.remove('bg-dark'); // Remover a classe de background dark do footer
+        footer.classList.remove('text-white'); // Remover a classe de cor branca da fonte
+        footer.style.backgroundColor = 'white'; // Define o background do footer como branco
+        footer.style.color = 'black'; // Define a cor da fonte do footer como preta
+      } else {
+        body.classList.add('theme-dark'); // Adiciona a classe do tema dark ao body
+        navbar.setAttribute('class', 'navbar navbar-expand-lg navbar-dark bg-dark'); // Altera a classe da navegação para o tema escuro
+        footer.classList.add('footer-dark'); // Adiciona a classe de tema escuro ao footer
+        footer.classList.add('bg-dark'); // Adiciona a classe de background dark ao footer
+        footer.classList.add('text-white'); // Adiciona a classe de cor branca da fonte
+        footer.style.backgroundColor = ''; // Remove o background do footer (para herdar o do tema claro definido no CSS)
+        footer.style.color = ''; // Remove a cor da fonte do footer (para herdar a do tema claro definido no CSS)
+      }
+    }
+
+    // Adicione um ouvinte de evento para os botões
+    document.getElementById('btnClaro').addEventListener('click', function() {
+      alternarTema('claro');
+    });
+
+    document.getElementById('btnEscuro').addEventListener('click', function() {
+      alternarTema('escuro');
+    });
+  </script>
   </div>  
   </main>
-  <footer class="footer">
+  <footer class="footer footer-dark bg-dark text-white text-center"> <!-- Adicionado a classe 'bg-dark' -->
     <a href="https://github.com/erika-bedin">Bedin Viagens</a> © 2023. Todos os direitos reservados (fins educacionais).
   </footer>
 </body>

@@ -1,0 +1,380 @@
+/*Paleta de cores do site*/
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #75797c;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+/*Home Page*/
+body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: url('./img/fundo\ site.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+h2{
+    color: #000000;
+    text-shadow: 2px 2px 4px #e83e8c;     
+    margin-left: 150px;
+    margin-right: 150px;
+} 
+.navbar-collapse {
+    justify-content:end;
+}
+.hero {
+    text-align: center;
+    margin-top: 20px;
+}
+.hero-title {
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px #000000;
+    margin-bottom: 20px;
+}
+.hero-image {
+    font-size: 48px;
+    width: 100%;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px #000000;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.hero-subtitle {
+    text-align: center;
+    font-size: 24px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px #000000;
+    margin-bottom: 40px;
+}
+/* Estilos comuns para botões */
+.btn {
+    font-size: 18px;
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+.featured-destinations {
+    margin-top: 50px;
+    text-align: center;
+}
+.destination-card, .search-form, .promotion-card {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background: url('./img/fundo\ site.jpg') no-repeat center center fixed;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+.destination-cardd {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background: linear-gradient(130deg, rgba(255, 150, 0, 0.5), rgba(255, 0, 165, 0.5), rgba(0,255,0,0.5), rgba(0,0,255,0.5));
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+.destination-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px #000000;
+}
+.destination-description {
+    text-align: justify;
+}
+.destination-button {
+    font-size: 16px;
+    font-weight: bold;
+}
+.footer {
+    background-color: #333333;
+    color: #b3b6b8; 
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    margin-top: auto;
+}
+/*Pesquisa*/
+body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: url('./img/fundo\ site.jpg') no-repeat center center fixed;
+    background-size: cover;
+}    
+.page-title{
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    color: #ffffff; /* cor branca */
+    text-shadow: 2px 2px 4px #000000; /* sombra do texto */
+    margin-top: 10px; /* margem superior para separar do topo */
+}
+.search-form {
+    margin: 20px auto;
+    max-width: 500px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+}
+.search-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.form-group label {
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px #e83e8c; /* sombra do texto */
+}
+.form-group input[type="text"],
+.form-group select {
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.form-group button{
+    justify-content: center;
+    align-items: center;
+}
+.form-group .text-center{
+    font-size: 15px;
+    font-stretch: expanded;
+    font-weight: bolder;    
+}
+.form-text-lgpd{
+    font-size: 15px;
+    font-weight: bolder; 
+    margin-top: 2%;
+    margin-bottom: 0%;
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.btn-search,  {
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn-primary{
+    padding: 10px;
+    width: 20%;
+    align-items: center;    
+    cursor: pointer;
+    display: inline;
+    margin: 0 auto;
+}
+/*Promoções*/  
+body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: url('./img/fundo site.jpg') no-repeat center center fixed;
+    background-size: cover;
+}    
+.promotion-card {
+    margin-bottom: 20px;
+}
+.page-title{
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    color: #ffffff; /* cor branca */
+    text-shadow: 2px 2px 4px #000000; /* sombra do texto */
+    margin-top: 10px; /* margem superior para separar do topo */
+}
+.card-title{
+    text-align: center;
+    text-shadow: 2px 2px 4px #e83e8c; /* sombra do texto */
+}
+.card-title1{
+    text-align: center;
+    text-shadow: 2px 2px 4px #e83e8c; /* sombra do texto */
+}
+.card-title2{
+    text-align: center;
+    font-size: medium;
+    text-shadow: 2px 2px 4px #e83e8c; /* sombra do texto */
+}
+.card-text{
+    text-align: justify;
+}
+.btn{
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+}
+.inner-card {
+    background-color: rgba(255, 255, 255,0.5);
+    padding: 10px;
+    margin-top: 10px;  
+    border: rgba(0, 255, 255,0.3) solid;
+    border-radius: 5px;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 40%;
+}
+.inner-card-title {
+    text-align: center;
+    font-size: medium;
+    margin-top: 10px;
+    align-items: center;
+}
+.inner-card-description {
+    text-align: center;
+    margin-top: 10px;
+    align-items: center;
+}
+.inner-card-coupon {
+    text-align: center;
+    font-size: medium;
+    background-color: #007bff;
+    color: #000000;
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-weight: bold;
+    width: 40%;
+    align-items: center;    
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+.inner-card-coupon.copied {
+    background-color: rgba(255, 255, 0, 1);
+    /* Outros estilos para realçar visualmente o botão copiado */
+}
+.modal-title, .modal-body{
+    color: #000000;
+}
+  /*Destino*/     
+.destination-card {
+    margin-bottom: 20px;      
+}
+.card-img-top{
+    width: 100%;
+    /*width: 348px;
+    height: 205px;*/
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.page-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px #000000;
+    margin-top: 10px;
+}
+.regiao-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: #000000;
+    text-shadow: 2px 2px 4px #17a2b8;
+    margin-top: 10px;
+}
+.card-title {
+    text-align: center;
+}
+.card-text {
+    text-align: justify;
+}
+.text-center{
+    text-align: center;
+}
+.return-topo{
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+/* Estilos personalizados para o carrossel */
+.carousel-inner img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    bottom: 20px;
+    width: auto;
+    align-items: center;
+    margin: 0 auto;
+}
+.carousel-caption h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.carousel-caption p {
+    font-size: 18px;
+    margin-bottom: 0;
+}
+/* Centralizar o botão dentro do carrossel */
+.carousel-caption .btn {
+    margin-top: 10px; 
+}
+/* Centralizar o cupom de desconto dentro do carrossel */
+.carousel-caption .inner-card-coupon {
+    margin: 0 auto; 
+}
