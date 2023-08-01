@@ -10,41 +10,41 @@
 </head>
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">    
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">    
       <div class="container">
           <img src="./img/logolimpa.png" alt="Logotipo da agência de viagens" width="100">
           <img src="./img/bedinviagens.png" alt="Logotipo da Bedin viagens" width="300">
-        <a class="navbar-brand" href="/index.html"></a>   
+        <a class="navbar-brand" href="/index.html"></a>          
         <div class="btn-group mx-2 ms-auto" role="group" aria-label="Basic radio toggle button group">
           <input type="radio" class="btn-check" name="btnradio" id="btnClaro" autocomplete="off">
           <label class="btn btn-outline-secondary" for="btnClaro">🌞</label>
           <input type="radio" class="btn-check" name="btnradio" id="btnEscuro" autocomplete="off">
           <label class="btn btn-outline-secondary" for="btnEscuro">🌚</label>
         </div>         
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-        </button>        
+        </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
+          <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" href="/index.html">Início</a>
+              <a class="nav-link active" href="index.html">Início</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/destino.html">Destinos</a>
+              <a class="nav-link" href="destino.html">Destinos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/pesquisa.html">Pesquisar</a>
+              <a class="nav-link" href="pesquisa.html">Pesquisar</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/promocoes.html">Promoções</a>
+              <a class="nav-link" href="promocoes.html">Promoções</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/contato.html">Contato</a>
+              <a class="nav-link" href="contato.html">Contato</a>
             </li>
           </ul>
-        </div>        
-      </div>      
-    </nav>  
+        </div>
+      </div>
+    </nav>
   </header> 
   <main>
   <div class="container hero">
@@ -120,7 +120,6 @@
     document.addEventListener("DOMContentLoaded", function() {
       // ... (restante do seu código JavaScript) ...
     });
-
     // Função para alternar o tema
     function alternarTema(tema) {
       const body = document.body;
@@ -145,12 +144,10 @@
         footer.style.color = ''; // Remove a cor da fonte do footer (para herdar a do tema claro definido no CSS)
       }
     }
-
     // Adicione um ouvinte de evento para os botões
     document.getElementById('btnClaro').addEventListener('click', function() {
       alternarTema('claro');
     });
-
     document.getElementById('btnEscuro').addEventListener('click', function() {
       alternarTema('escuro');
     });
