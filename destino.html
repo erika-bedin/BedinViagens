@@ -15,7 +15,7 @@
         <img src="./img/logolimpa.png" alt="Logotipo da agência de viagens" width="100">
         <img src="./img/bedinviagens.png" alt="Logotipo da Bedin viagens" width="300">
       <a class="navbar-brand" href="/index.html"></a> 
-      <div class="btn-group mx-2 ms-auto" role="group" aria-label="Basic radio toggle button group">
+      <div class="btn-group mx-2" role="group" aria-label="Basic radio toggle button group">
         <input type="radio" class="btn-check" name="btnradio" id="btnClaro" autocomplete="off">
         <label class="btn btn-outline-secondary" for="btnClaro">🌞</label>
         <input type="radio" class="btn-check" name="btnradio" id="btnEscuro" autocomplete="off">
@@ -214,16 +214,13 @@
     <a class="return-topo btn btn-secondary" href="#topo">Voltar ao topo da página</a>
   </div>    
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      // ... (restante do seu código JavaScript) ...
+    document.addEventListener("DOMContentLoaded", function() {      
     });
-
     // Função para alternar o tema
     function alternarTema(tema) {
       const body = document.body;
       const navbar = document.querySelector('.navbar');
       const footer = document.querySelector('.footer');
-
       if (tema === 'claro') {
         body.classList.remove('theme-dark'); // Remover a classe do tema dark do body
         navbar.setAttribute('class', 'navbar navbar-expand-lg navbar-light bg-light'); // Altera a classe da navegação para o tema claro
@@ -242,12 +239,10 @@
         footer.style.color = ''; // Remove a cor da fonte do footer (para herdar a do tema claro definido no CSS)
       }
     }
-
-    // Adicione um ouvinte de evento para os botões
+    // Adiciona um ouvinte de evento para os botões
     document.getElementById('btnClaro').addEventListener('click', function() {
       alternarTema('claro');
     });
-
     document.getElementById('btnEscuro').addEventListener('click', function() {
       alternarTema('escuro');
     });

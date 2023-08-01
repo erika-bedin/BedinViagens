@@ -57,9 +57,6 @@ footer {
     width: 100%;
     margin-top: auto;
 }
-.navbar-nav {
-    margin-left: auto;
-  }
 .page-title{
     text-align: center;
     font-weight: bold;
@@ -170,12 +167,12 @@ footer {
 .carousel-inner img {
     border-radius: 5px;
     margin: 0 auto; 
-    margin-bottom: 2%;
+    margin-bottom: 1%;
     width: 100%;
     height: 450px;
 }
 .carousel-caption {
-    margin-top: 2%;    
+    margin-top: 2%;   
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 5px;  
 }
@@ -204,6 +201,7 @@ footer {
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.7);
     color: #fff;
+    border-radius: 5px;
   }
 .carousel-caption-promo-sm {
     padding: 1%;
@@ -221,8 +219,9 @@ footer {
   }
 .carousel-caption-sm h3,
 .carousel-caption-sm p {
-    margin-bottom: 0;
+    margin-bottom: -0.5%;
 }
+/* Estilos personalizados para os efeitos js*/
 .hidden {
     opacity: 0;
     visibility: hidden;

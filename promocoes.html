@@ -14,7 +14,7 @@
           <img src="./img/logolimpa.png" alt="Logotipo da agência de viagens" width="100">
           <img src="./img/bedinviagens.png" alt="Logotipo da Bedin viagens" width="300">
           <a class="navbar-brand" href="/index.html"></a>    
-          <div class="btn-group mx-2 ms-auto" role="group" aria-label="Basic radio toggle button group">
+          <div class="btn-group mx-2" role="group" aria-label="Basic radio toggle button group">
             <input type="radio" class="btn-check" name="btnradio" id="btnClaro" autocomplete="off">
             <label class="btn btn-outline-secondary" for="btnClaro">🌞</label>
             <input type="radio" class="btn-check" name="btnradio" id="btnEscuro" autocomplete="off">
@@ -223,7 +223,6 @@
     </script>    
     <script>
       document.addEventListener("DOMContentLoaded", function() {
-        // ... (restante do seu código JavaScript) ...
       });  
       // Função para alternar o tema
       function alternarTema(tema) {
@@ -248,7 +247,7 @@
           footer.style.color = ''; // Remove a cor da fonte do footer (para herdar a do tema claro definido no CSS)
         }
       }  
-      // Adicione um ouvinte de evento para os botões
+      // Adiciona um ouvinte de evento para os botões
       document.getElementById('btnClaro').addEventListener('click', function() {
         alternarTema('claro');
       });  
