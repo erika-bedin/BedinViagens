@@ -6,7 +6,7 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
-    background: url('./img/fundo\ site.jpg') no-repeat center center fixed;
+    background: url('./img/fundo\ site.jpg') no-repeat center center fixed;        
     background-size: cover;
 }    
 .hero-title {
@@ -17,20 +17,40 @@ body {
     margin-bottom: 5%;
     margin-top: 5%;
 }
+
 /* Estilos comuns para botões */
-.destination-card, .search-form, .promotion-card {
+.destination-card,
+.search-form,
+.promotion-card {    
+    position: relative;
     max-width: 100%;
     margin: auto;
     margin-top: 3%;
     margin-bottom: 1%;
     padding: 5%;
     border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+/* Pseudo-elemento para a camada de fundo */
+.destination-card::before,
+.search-form::before,
+.promotion-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
     background-image: url('./img/fundo\ site.jpg');
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    background-size: cover;    
+    transform: scaleX(-1);
+    opacity: 0.8; /* Define a opacidade para o valor desejado, aqui 0.5 torna a imagem quase transparente */
+    z-index: -1; /* Coloca o pseudo-elemento atrás do conteúdo interno */
 }
+
 .destination-cardd {
     margin-top: 5%;
     margin-bottom: 5%;
@@ -68,18 +88,17 @@ footer {
     text-align: center;
     margin-bottom: 10px;
 }
-.form-group label {
-    font-weight: bold;
-    font-size: large;
-    text-shadow: 2px 2px 4px #e83e8c; /* sombra do texto */
-}
-.form-group input[type="text"],
-.form-group select {
+.form-group input,
+.form-group label,
+.form-group select,
+.form-group textarea,
+.form-control,
+.col-form-label,
+.form-check,
+.row {
     align-items: center;
-    width: 100%;
     font-size: large;
     padding: 5px;
-    border: 1px solid #ccc;
     border-radius: 4px;
 }
 .form-group button{
@@ -88,15 +107,15 @@ footer {
     bottom: 0;
 }
 .form-group {
-    font-stretch: expanded;
     font-weight: bolder; 
+    
 }
 .form-text-lgpd{
     font-size: 15px;
     margin-top: 2%;
     margin-bottom: 0%;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 35%;
+    margin-right: 35%;
     background-color: rgba(255, 255, 255, 0.4);
 }
 .btn-search {
