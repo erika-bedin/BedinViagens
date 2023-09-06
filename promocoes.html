@@ -7,43 +7,8 @@
   <link rel="stylesheet" href="/style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
-<body>
+<body id="promocoes">
   <header>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <div class="container">
-          <img src="./img/logolimpa.png" alt="Logotipo da agência de viagens" width="100">
-          <img src="./img/bedinviagens.png" alt="Logotipo da Bedin viagens" width="300">
-          <a class="navbar-brand" href="/index.html"></a>    
-          <div class="btn-group mx-2" role="group" aria-label="Basic radio toggle button group">
-            <input type="radio" class="btn-check" name="btnradio" id="btnClaro" autocomplete="off">
-            <label class="btn btn-outline-secondary" for="btnClaro">🌞</label>
-            <input type="radio" class="btn-check" name="btnradio" id="btnEscuro" autocomplete="off">
-            <label class="btn btn-outline-secondary" for="btnEscuro">🌚</label>
-          </div>                 
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Início</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="destino.html">Destinos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="pesquisa.html">Pesquisar</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="promocoes.html">Promoções</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contato.html">Contato</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
   </header> 
   <main class="hidden">   
     <div class="container mt-4">
@@ -192,73 +157,27 @@
           </button>
         </div>
       </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        var main = document.querySelector("main"); // Selecionar o elemento main corretamente
-        main.classList.remove("hidden"); // Remover a classe 'hidden' para exibir o main
-        main.classList.add("zoom-in"); // Aplicar a animação após o main ser exibido
-      });
-    </script>
-    <script>
-      // Função para copiar o conteúdo do cupom para a área de transferência
-      function copyToClipboard(event) {
-        const couponText = event.target.textContent;
-        const tempInput = document.createElement('textarea');
-        tempInput.style.position = 'fixed';
-        tempInput.style.opacity = 0;
-        tempInput.value = couponText;
-        document.body.appendChild(tempInput);
-        tempInput.select();
-        document.execCommand('copy');
-        document.body.removeChild(tempInput);
-        // Adicionar classe para mostrar feedback visual do botão copiado
-        event.target.classList.add('copied');      
-        // Remover classe após 1 segundo
-        setTimeout(() => {
-          event.target.classList.remove('copied');
-        }, 1000);
-        }      
-    </script>    
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-      });  
-      // Função para alternar o tema
-      function alternarTema(tema) {
-        const body = document.body;
-        const navbar = document.querySelector('.navbar');
-        const footer = document.querySelector('.footer');  
-        if (tema === 'claro') {
-          body.classList.remove('theme-dark'); // Remover a classe do tema dark do body
-          navbar.setAttribute('class', 'navbar navbar-expand-lg navbar-light bg-light'); // Altera a classe da navegação para o tema claro
-          footer.classList.remove('footer-dark'); // Remove a classe escura do footer
-          footer.classList.remove('bg-dark'); // Remover a classe de background dark do footer
-          footer.classList.remove('text-white'); // Remover a classe de cor branca da fonte
-          footer.style.backgroundColor = 'white'; // Define o background do footer como branco
-          footer.style.color = 'black'; // Define a cor da fonte do footer como preta
-        } else {
-          body.classList.add('theme-dark'); // Adiciona a classe do tema dark ao body
-          navbar.setAttribute('class', 'navbar navbar-expand-lg navbar-dark bg-dark'); // Altera a classe da navegação para o tema escuro
-          footer.classList.add('footer-dark'); // Adiciona a classe de tema escuro ao footer
-          footer.classList.add('bg-dark'); // Adiciona a classe de background dark ao footer
-          footer.classList.add('text-white'); // Adiciona a classe de cor branca da fonte
-          footer.style.backgroundColor = ''; // Remove o background do footer (para herdar o do tema claro definido no CSS)
-          footer.style.color = ''; // Remove a cor da fonte do footer (para herdar a do tema claro definido no CSS)
-        }
-      }  
-      // Adiciona um ouvinte de evento para os botões
-      document.getElementById('btnClaro').addEventListener('click', function() {
-        alternarTema('claro');
-      });  
-      document.getElementById('btnEscuro').addEventListener('click', function() {
-        alternarTema('escuro');
-      });
-    </script>
     </div>    
-  </main> 
-  <footer class="footer footer-dark bg-dark text-white text-center"> <!-- Adicionado a classe 'bg-dark' -->
-    Bedin Viagens© 2023. Desenvolvido por 🌺 <a href="https://github.com/erika-bedin">Érika Bedin</a> 👩🏼‍💻. <br> Todos os direitos reservados (fins educacionais).
-  </footer> 
+    </div>     
+  </main>
+  <footer>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>  
+  <script src="/scripts/function.js"></script> 
+  <script src="/scripts/components.js"></script>  
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var main = document.querySelector("main"); // Selecionar o elemento main corretamente
+      main.classList.remove("hidden"); // Remover a classe 'hidden' para exibir o main
+      main.classList.add("zoom-in"); // Aplica a animação após o main ser exibido
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      configurarHeader();
+      configurarFooter();
+      configurarHeaderEFooter();
+    });
+  </script>  
 </body>
 </html>

@@ -17,7 +17,6 @@ body {
     margin-bottom: 5%;
     margin-top: 5%;
 }
-
 /* Estilos comuns para botões */
 .destination-card,
 .search-form,
@@ -70,6 +69,13 @@ body {
 }
 .destination-button {
     font-weight: bold;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Para garantir que o header fique acima de outros elementos */  
 }
 footer {
     padding: 10px;
