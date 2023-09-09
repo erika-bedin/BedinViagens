@@ -1,11 +1,9 @@
 /*Home Page*/
-body {
-    padding: 20px;
+body {    
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    margin: 0;
-    padding: 0;
+    margin: 0;    
     background: url('./img/fundo\ site.jpg') no-repeat center center fixed;        
     background-size: cover;
 }    
@@ -14,8 +12,8 @@ body {
     color: #ffffff;
     text-align: center;
     text-shadow: 2px 2px 4px #000000;
-    margin-bottom: 5%;
-    margin-top: 5%;
+    margin-bottom: 2%;
+    margin-top: 1%;
 }
 /* Estilos comuns para botões */
 .destination-card,
@@ -24,9 +22,9 @@ body {
     position: relative;
     max-width: 100%;
     margin: auto;
-    margin-top: 3%;
-    margin-bottom: 1%;
-    padding: 5%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    padding: 2%;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
@@ -70,15 +68,25 @@ body {
 .destination-button {
     font-weight: bold;
 }
+.content {
+    margin-top: 7%;
+}
+.hidden {
+    margin-top: 7%;    
+}
 header {
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
+    padding: 0;
+    height: 70px;
     width: 100%;
-    z-index: 1000; /* Para garantir que o header fique acima de outros elementos */  
+    margin-bottom: auto;
+    z-index: 999;
 }
 footer {
-    padding: 10px;
+    padding: 5px;
     text-align: center;
     width: 100%;
     margin-top: auto;
@@ -86,13 +94,40 @@ footer {
 .page-title{
     text-align: center;
     font-weight: bold;
-    color: #ffffff; /* cor branca */
-    text-shadow: 2px 2px 4px #000000; /* sombra do texto */
-    margin-top: 20px; /* margem superior para separar do topo */
+    color: #ffffff; 
+    text-shadow: 2px 2px 4px #000000;
+    margin-top: 10%; 
+    margin-bottom: 1%;
+}
+.text-center0{
+    margin-top: 8%;
+    margin-bottom: -1%;
+}
+section, h1, .text-center1 {
+    margin-top: 0%;
+    margin-bottom: -1%;
 }
 .search-form h2 {
     text-align: center;
     margin-bottom: 10px;
+}
+.back-to-top {
+    background: #fff;
+    cursor: pointer;   
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;   
+    line-height: 0;   
+    visibility: hidden;
+    opacity: 0;   
+    transition: 0.3s;
+    transform: translateY(100%);
+}
+   
+.back-to-top.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
 }
 .form-group input,
 .form-group label,
@@ -256,7 +291,7 @@ main.hidden {
     display: nome;
 }
 .zoom-in {
-    animation: zoomInAnimation 2s ease;
+    animation: zoomInAnimation 1.5s ease;
 }
 
 @keyframes zoomInAnimation {

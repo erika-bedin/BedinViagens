@@ -1,55 +1,123 @@
-function configurarHeader() {
-  const header = document.createElement('header');
-  header.className = 'header header-dark bg-dark text-white text-center';
-
-  const headerContent = `
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">    
-      <div class="container">
-          <img src="./img/logolimpa.png" alt="Logotipo da agência de viagens" width="100">
-          <img src="./img/bedinviagens.png" alt="Logotipo da Bedin viagens" width="300">
-        <a class="navbar-brand" href="/index.html"></a>          
-        <div class="btn-group mx-2" role="group" aria-label="Basic radio toggle button group">
-          <input type="radio" class="btn-check" name="btnradio" id="btnClaro" autocomplete="off">
-          <label class="btn btn-outline-secondary" for="btnClaro">🌞</label>
-          <input type="radio" class="btn-check" name="btnradio" id="btnEscuro" autocomplete="off">
-          <label class="btn btn-outline-secondary" for="btnEscuro">🌚</label>
-        </div>         
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Início</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="destino.html">Destinos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="pesquisa.html">Pesquisar</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="promocoes.html">Promoções</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contato.html">Contato</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  `;
+function criarHeader() {
+  const header = document.createElement('nav');
+  header.className = 'navbar navbar-expand-md navbar-dark bg-dark';
   
-  header.innerHTML = headerContent;
+  const container = document.createElement('div');
+  container.className = 'container';
 
-  document.body.appendChild(header);
+  const logo1 = document.createElement('img');
+  logo1.src = './img/logolimpa.png';
+  logo1.alt = 'Logotipo da agência de viagens';
+  logo1.width = '80';
+
+  const logo2 = document.createElement('img');
+  logo2.src = './img/bedinviagens.png';
+  logo2.alt = 'Logotipo da Bedin viagens';
+  logo2.width = '250';
+
+  const brandLink = document.createElement('a');
+  brandLink.className = 'navbar-brand';
+  brandLink.href = '/index.html';
+
+  const themeButtons = document.createElement('div');
+  themeButtons.className = 'btn-group mx-2';
+  themeButtons.role = 'group';
+  themeButtons.setAttribute('aria-label', 'Basic radio toggle button group');
+
+  const lightModeInput = document.createElement('input');
+  lightModeInput.type = 'radio';
+  lightModeInput.className = 'btn-check';
+  lightModeInput.name = 'btnradio';
+  lightModeInput.id = 'btnClaro';
+  lightModeInput.autocomplete = 'off';
+
+  const lightModeLabel = document.createElement('label');
+  lightModeLabel.className = 'btn btn-outline-secondary';
+  lightModeLabel.setAttribute('for', 'btnClaro');
+  lightModeLabel.textContent = '🌞';
+
+  const darkModeInput = document.createElement('input');
+  darkModeInput.type = 'radio';
+  darkModeInput.className = 'btn-check';
+  darkModeInput.name = 'btnradio';
+  darkModeInput.id = 'btnEscuro';
+  darkModeInput.autocomplete = 'off';
+
+  const darkModeLabel = document.createElement('label');
+  darkModeLabel.className = 'btn btn-outline-secondary';
+  darkModeLabel.setAttribute('for', 'btnEscuro');
+  darkModeLabel.textContent = '🌚';
+
+  const menuCollapseDiv = document.createElement('div');
+  menuCollapseDiv.className = 'collapse navbar-collapse';
+  menuCollapseDiv.id = 'navbarNav';
+
+  const menuList = document.createElement('ul');
+  menuList.className = 'navbar-nav ms-auto';
+
+  const menuItems = [
+    { text: 'Início', link: 'index.html' },
+    { text: 'Destinos', link: 'destino.html' },
+    { text: 'Pesquisar', link: 'pesquisa.html' },
+    { text: 'Promoções', link: 'promocoes.html' },
+    { text: 'Contato', link: 'contato.html' },
+  ];
+
+  menuItems.forEach(item => {
+    const menuItem = document.createElement('li');
+    menuItem.className = 'nav-item';
+    const menuItemLink = document.createElement('a');
+    menuItemLink.className = 'nav-link';
+    menuItemLink.href = item.link;
+    menuItemLink.textContent = item.text;
+    menuItem.appendChild(menuItemLink);
+    menuList.appendChild(menuItem);
+  });
+
+  menuCollapseDiv.appendChild(menuList);
+
+  // Criação do botão de hamburger
+  const menuHamburgerButton = document.createElement('button');
+  menuHamburgerButton.className = 'navbar-toggler';
+  menuHamburgerButton.type = 'button';
+  menuHamburgerButton.setAttribute('data-bs-toggle', 'collapse');
+  menuHamburgerButton.setAttribute('data-bs-target', '#navbarNav');
+  menuHamburgerButton.setAttribute('aria-controls', 'navbarNav');
+  menuHamburgerButton.setAttribute('aria-expanded', 'false');
+  menuHamburgerButton.setAttribute('aria-label', 'Toggle navigation');
+
+  // Ícone do botão de hamburger
+  const menuHamburgerIcon = document.createElement('span');
+  menuHamburgerIcon.className = 'navbar-toggler-icon';
+  menuHamburgerButton.appendChild(menuHamburgerIcon);
+
+  // Adicione todos os elementos ao header
+  themeButtons.appendChild(lightModeInput);
+  themeButtons.appendChild(lightModeLabel);
+  themeButtons.appendChild(darkModeInput);
+  themeButtons.appendChild(darkModeLabel);
+
+  container.appendChild(logo1);
+  container.appendChild(logo2);
+  container.appendChild(brandLink);
+  container.appendChild(themeButtons);
+  container.appendChild(menuCollapseDiv);
+  container.appendChild(menuHamburgerButton);
+
+  header.appendChild(container);
+
+  return header;
 }
+
+// Agora, chame a função criarHeader() e adicione o header ao DOM
+const headerElement = criarHeader();
+document.getElementById('header').appendChild(headerElement);
+
 
 function configurarHeaderEFooter() {
 // Destacar o item do navbar ativo na página atual
 const paginaAtual = document.body.id;
 const linksNavbar = document.querySelectorAll('.nav-link');
-
 linksNavbar.forEach(link => {
   if (link.getAttribute('href') === paginaAtual + '.html') {
     link.classList.add('active');
@@ -61,13 +129,17 @@ linksNavbar.forEach(link => {
 
 function configurarFooter() {
     const footer = document.createElement('footer');
-    footer.className = 'footer footer-dark bg-dark text-white text-center';
-  
+    footer.className = 'footer footer-dark bg-dark text-white text-center';  
     const footerContent = `
       Bedin Viagens© 2023. Desenvolvido por 🌺 <a href="https://github.com/erika-bedin">Érika Bedin</a> 👩🏼‍💻. <br> Todos os direitos reservados (fins educacionais).
-    `;
-  
-    footer.innerHTML = footerContent;
-  
+    `;  
+    footer.innerHTML = footerContent;  
     document.body.appendChild(footer);
   }
+// Chama as funções para configurar o header, footer e destacar item de navegação
+document.addEventListener("DOMContentLoaded", function() {
+  
+  configurarFooter();
+  configurarHeaderEFooter();
+});
+

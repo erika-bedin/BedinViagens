@@ -9,13 +9,14 @@
 </head>
 <body id="pesquisa">
   <header>  
+    <nav id="header"></nav>
   </header>    
   <main class="hidden">
   <div class="container">
-    <h1 class="page-title">Pesquisar</h1>
+    <h1 class="text-center mb-8 page-title">Pesquisar</h1>
     <div class="search-form">      
       <form action="/buscar" method="GET">        
-        <div class="form-group">
+        <div class="form-group mb-2">
           <label for="origem">Origem:</label>
           <select id="origem" name="origem">
               <option value="">Selecione a origem</option>
@@ -70,7 +71,7 @@
           <label for="datachegada">Data de Chegada:</label>
           <input type="date" id="datachegada" name="datachegada">
         </div>        
-        <div class="form-group">
+        <div class="form-group mb-2">
           <label for="pessoas">Quantidade de pessoas:</label>
           <select id="pessoas" name="pessoas">
             <option value="">Selecione a quantidade de pessoas</option>
@@ -99,20 +100,6 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>  
     <script src="/scripts/function.js"></script> 
-    <script src="/scripts/components.js"></script>  
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        var main = document.querySelector("main"); // Selecionar o elemento main corretamente
-        main.classList.remove("hidden"); // Remover a classe 'hidden' para exibir o main
-        main.classList.add("zoom-in"); // Aplicar a animação após o main ser exibido
-      });
-    </script>    
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        configurarHeader();
-        configurarFooter();
-        configurarHeaderEFooter();
-      });
-    </script>   
+    <script src="/scripts/components.js"></script>
 </body>
 </html>

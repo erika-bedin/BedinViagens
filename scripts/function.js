@@ -3,12 +3,12 @@ document.addEventListener("DOMContentLoaded", function() {
       var heroTitle = document.querySelector(".hero-title");
       heroTitle.classList.remove("hidden");
       heroTitle.classList.add("zoom-in");
-    }, 500); // 500ms após o carregamento da página  
+    }, 300); // 300ms após o carregamento da página  
     setTimeout(function() {
       var carousel = document.querySelector("#carouselhome");
       carousel.classList.remove("hidden");
       carousel.classList.add("zoom-in");
-    }, 3000); // 3000ms após o carregamento da página
+    }, 1000); // 1000ms após o carregamento da página
   });
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -36,29 +36,49 @@ function alternarTema(tema) {
     footer.style.color = ''; // Remove a cor da fonte do footer (para herdar a do tema claro definido no CSS)
   }
 }
-// Adiciona um ouvinte de evento para os botões
-document.getElementById('btnClaro').addEventListener('click', function() {
-  alternarTema('claro');
+
+// Adicione ouvintes de evento para os botões de light mode e dark mode
+document.addEventListener("DOMContentLoaded", function() {
+  // Ouvinte de evento para o botão de light mode
+  document.getElementById('btnClaro').addEventListener('click', function() {
+    alternarTema('claro');
+  });
+
+  // Ouvinte de evento para o botão de dark mode
+  document.getElementById('btnEscuro').addEventListener('click', function() {
+    alternarTema('escuro');
+  });
 });
-document.getElementById('btnEscuro').addEventListener('click', function() {
-  alternarTema('escuro');
-});  
+
+// Função de animação dos itens
+document.addEventListener("DOMContentLoaded", function() {
+  var main = document.querySelector("main"); // Selecionar o elemento main corretamente
+  main.classList.remove("hidden"); // Remover a classe 'hidden' para exibir o main
+  main.classList.add("zoom-in"); // Aplicar a animação após o main ser exibido
+});
+
+// Botão topo da página
+document.getElementById('botaoTopo').addEventListener('click', function() {
+  // Código para rolar a página para o topo
+  window.scrollTo(0, 0);
+});
 
 // Função para copiar o conteúdo do cupom para a área de transferência
 function copyToClipboard(event) {
-    const couponText = event.target.textContent;
-    const tempInput = document.createElement('textarea');
-    tempInput.style.position = 'fixed';
-    tempInput.style.opacity = 0;
-    tempInput.value = couponText;
-    document.body.appendChild(tempInput);
-    tempInput.select();
-    document.execCommand('copy');
-    document.body.removeChild(tempInput);
-    // Adicionar classe para mostrar feedback visual do botão copiado
-    event.target.classList.add('copied');      
-    // Remover classe após 1 segundo
-    setTimeout(() => {
-      event.target.classList.remove('copied');
-    }, 1000);
-    }    
+  const couponText = event.target.textContent;
+  const tempInput = document.createElement('textarea');
+  tempInput.style.position = 'fixed';
+  tempInput.style.opacity = 0;
+  tempInput.value = couponText;
+  document.body.appendChild(tempInput);
+  tempInput.select();
+  document.execCommand('copy');
+  document.body.removeChild(tempInput);
+  // Adicionar classe para mostrar feedback visual do botão copiado
+  event.target.classList.add('copied');      
+  // Remover classe após 1 segundo
+  setTimeout(() => {
+    event.target.classList.remove('copied');
+  }, 1000);
+}
+
