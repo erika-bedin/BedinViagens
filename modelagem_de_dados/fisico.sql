@@ -35,5 +35,18 @@ CREATE TABLE destino (
     FOREIGN KEY (id_cliente) REFERENCES cliente(id) ON DELETE CASCADE
 );
 
+CREATE TABLE contato (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100),
+    celular VARCHAR(11),
+    email VARCHAR(100),
+    mensagem TEXT,
+    preferencia_contato VARCHAR(50),
+    melhor_periodo_contato VARCHAR(100),
+    descontos_exclusivos BOOLEAN,
+    receber_novidades_email BOOLEAN
+);
+
 DESCRIBE cliente;
 DESCRIBE destino;
+DESCRIBE contato;
