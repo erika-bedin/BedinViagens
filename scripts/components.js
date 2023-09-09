@@ -137,8 +137,7 @@ function configurarFooter() {
     document.body.appendChild(footer);
   }
 // Chama as funções para configurar o header, footer e destacar item de navegação
-document.addEventListener("DOMContentLoaded", function() {
-  
+document.addEventListener("DOMContentLoaded", function() {  
   configurarFooter();
   configurarHeaderEFooter();
 });

@@ -3,17 +3,16 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    margin: 0;    
     background: url('./img/fundo\ site.jpg') no-repeat center center fixed;        
     background-size: cover;
-}    
+}
 .hero-title {
     font-weight: bold;
     color: #ffffff;
     text-align: center;
     text-shadow: 2px 2px 4px #000000;
-    margin-bottom: 2%;
-    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-top: 0%;
 }
 /* Estilos comuns para botões */
 .destination-card,
@@ -47,7 +46,6 @@ body {
     opacity: 0.8; /* Define a opacidade para o valor desejado, aqui 0.5 torna a imagem quase transparente */
     z-index: -1; /* Coloca o pseudo-elemento atrás do conteúdo interno */
 }
-
 .destination-cardd {
     margin-top: 5%;
     margin-bottom: 5%;
@@ -68,22 +66,11 @@ body {
 .destination-button {
     font-weight: bold;
 }
-.content {
-    margin-top: 7%;
-}
-.hidden {
-    margin-top: 7%;    
-}
 header {
-    position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    padding: 0;
-    height: 70px;
-    width: 100%;
-    margin-bottom: auto;
-    z-index: 999;
+    z-index: 9999;
 }
 footer {
     padding: 5px;
@@ -96,16 +83,6 @@ footer {
     font-weight: bold;
     color: #ffffff; 
     text-shadow: 2px 2px 4px #000000;
-    margin-top: 10%; 
-    margin-bottom: 1%;
-}
-.text-center0{
-    margin-top: 8%;
-    margin-bottom: -1%;
-}
-section, h1, .text-center1 {
-    margin-top: 0%;
-    margin-bottom: -1%;
 }
 .search-form h2 {
     text-align: center;
@@ -122,8 +99,7 @@ section, h1, .text-center1 {
     opacity: 0;   
     transition: 0.3s;
     transform: translateY(100%);
-}
-   
+}   
 .back-to-top.show {
     visibility: visible;
     opacity: 1;
@@ -148,8 +124,7 @@ section, h1, .text-center1 {
     bottom: 0;
 }
 .form-group {
-    font-weight: bolder; 
-    
+    font-weight: bolder;     
 }
 .form-text-lgpd{
     font-size: 15px;
@@ -180,7 +155,7 @@ section, h1, .text-center1 {
 /*Promoções*/  
 .card-title{
     text-align: center;
-    text-shadow: 2px 2px 4px #e83e8c; /* sombra do texto */
+    text-shadow: 2px 2px 4px #e83e8c; 
 }
 .inner-card {
     background-color: rgba(255, 255, 255,0.2);    
@@ -203,7 +178,6 @@ section, h1, .text-center1 {
 }
 .inner-card-coupon.copied {
     background-color: rgba(255, 255, 0, 1);
-    /* Outros estilos para realçar visualmente o botão copiado */
 }
 .modal-title, .modal-body{
     color: #000000;
@@ -302,5 +276,4 @@ from {
 to {
     opacity: 1;
     transform: scale(1);
-}
 }

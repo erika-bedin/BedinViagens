@@ -18,6 +18,8 @@ function alternarTema(tema) {
   const body = document.body;
   const navbar = document.querySelector('.navbar');
   const footer = document.querySelector('.footer');
+
+
   if (tema === 'claro') {
     body.classList.remove('theme-dark'); // Remover a classe do tema dark do body
     navbar.setAttribute('class', 'navbar navbar-expand-lg navbar-light bg-light'); // Altera a classe da navegação para o tema claro
@@ -35,15 +37,24 @@ function alternarTema(tema) {
     footer.style.backgroundColor = ''; // Remove o background do footer (para herdar o do tema claro definido no CSS)
     footer.style.color = ''; // Remove a cor da fonte do footer (para herdar a do tema claro definido no CSS)
   }
+} 
+
+// Função para inicializar o tema com base no armazenamento local
+function inicializarTema() {
+  const temaSalvo = localStorage.getItem('tema');
+  if (temaSalvo) {
+    alternarTema(temaSalvo);
+  }
 }
+// Adicione um ouvinte de evento para carregar o tema ao carregar a página
+document.addEventListener('DOMContentLoaded', inicializarTema);
 
 // Adicione ouvintes de evento para os botões de light mode e dark mode
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener('DOMContentLoaded', function() {
   // Ouvinte de evento para o botão de light mode
   document.getElementById('btnClaro').addEventListener('click', function() {
     alternarTema('claro');
   });
-
   // Ouvinte de evento para o botão de dark mode
   document.getElementById('btnEscuro').addEventListener('click', function() {
     alternarTema('escuro');
@@ -74,11 +85,12 @@ function copyToClipboard(event) {
   tempInput.select();
   document.execCommand('copy');
   document.body.removeChild(tempInput);
-  // Adicionar classe para mostrar feedback visual do botão copiado
-  event.target.classList.add('copied');      
+  // Exibir a mensagem de aviso
+  const copyConfirmation = document.querySelector('.copy-confirmation');
+  copyConfirmation.classList.remove('hidden');
+  
   // Remover classe após 1 segundo
   setTimeout(() => {
     event.target.classList.remove('copied');
   }, 1000);
 }
-
