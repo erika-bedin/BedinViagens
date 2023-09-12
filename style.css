@@ -267,7 +267,6 @@ main.hidden {
 .zoom-in {
     animation: zoomInAnimation 1.5s ease;
 }
-
 @keyframes zoomInAnimation {
 from {
     opacity: 0;
