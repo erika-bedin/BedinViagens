@@ -128,17 +128,21 @@ linksNavbar.forEach(link => {
 }
 
 function configurarFooter() {
-    const footer = document.createElement('footer');
+  const footer = document.querySelector('footer');
+  if (footer) {
     footer.className = 'footer footer-dark bg-dark text-white text-center';  
     const footerContent = `
       Bedin Viagens© 2023. Desenvolvido por 🌺 <a href="https://github.com/erika-bedin">Érika Bedin</a> 👩🏼‍💻. <br> Todos os direitos reservados (fins educacionais).
     `;  
     footer.innerHTML = footerContent;  
-    document.body.appendChild(footer);
   }
-// Chama as funções para configurar o header, footer e destacar item de navegação
-document.addEventListener("DOMContentLoaded", function() {  
-  configurarFooter();
+}
+
+// Chame a função para configurar o footer
+configurarFooter();
+
+// Chama as funções e destacar item de navegação
+document.addEventListener("DOMContentLoaded", function() { 
   configurarHeaderEFooter();
 });
 

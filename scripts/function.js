@@ -11,33 +11,50 @@ document.addEventListener("DOMContentLoaded", function() {
     }, 1000); // 1000ms após o carregamento da página
   });
 
-document.addEventListener("DOMContentLoaded", function() {
-});
 // Função para alternar o tema
 function alternarTema(tema) {
   const body = document.body;
   const navbar = document.querySelector('.navbar');
   const footer = document.querySelector('.footer');
 
+  if (!body) {
+    console.error("Elemento 'body' não encontrado.");
+    return;
+  }
+  
+  // Salvar a preferência de tema no localStorage
+  localStorage.setItem('tema', tema);
 
   if (tema === 'claro') {
-    body.classList.remove('theme-dark'); // Remover a classe do tema dark do body
-    navbar.setAttribute('class', 'navbar navbar-expand-lg navbar-light bg-light'); // Altera a classe da navegação para o tema claro
-    footer.classList.remove('footer-dark'); // Remove a classe escura do footer
-    footer.classList.remove('bg-dark'); // Remover a classe de background dark do footer
-    footer.classList.remove('text-white'); // Remover a classe de cor branca da fonte
-    footer.style.backgroundColor = 'white'; // Define o background do footer como branco
-    footer.style.color = 'black'; // Define a cor da fonte do footer como preta
+    body.classList.remove('theme-dark');
   } else {
-    body.classList.add('theme-dark'); // Adiciona a classe do tema dark ao body
-    navbar.setAttribute('class', 'navbar navbar-expand-lg navbar-dark bg-dark'); // Altera a classe da navegação para o tema escuro
-    footer.classList.add('footer-dark'); // Adiciona a classe de tema escuro ao footer
-    footer.classList.add('bg-dark'); // Adiciona a classe de background dark ao footer
-    footer.classList.add('text-white'); // Adiciona a classe de cor branca da fonte
-    footer.style.backgroundColor = ''; // Remove o background do footer (para herdar o do tema claro definido no CSS)
-    footer.style.color = ''; // Remove a cor da fonte do footer (para herdar a do tema claro definido no CSS)
+    body.classList.add('theme-dark');
   }
-} 
+
+  if (navbar) {
+    if (tema === 'claro') {
+      navbar.setAttribute('class', 'navbar navbar-expand-lg navbar-light bg-light');
+    } else {
+      navbar.setAttribute('class', 'navbar navbar-expand-lg navbar-dark bg-dark');
+    }
+  }
+
+  if (footer) {
+    if (tema === 'claro') {
+      footer.classList.remove('footer-dark');
+      footer.classList.remove('bg-dark');
+      footer.classList.remove('text-white');
+      footer.style.backgroundColor = 'white';
+      footer.style.color = 'black';
+    } else {
+      footer.classList.add('footer-dark');
+      footer.classList.add('bg-dark');
+      footer.classList.add('text-white');
+      footer.style.backgroundColor = '';
+      footer.style.color = '';
+    }
+  }
+}
 
 // Função para inicializar o tema com base no armazenamento local
 function inicializarTema() {
@@ -46,6 +63,7 @@ function inicializarTema() {
     alternarTema(temaSalvo);
   }
 }
+
 // Adicione um ouvinte de evento para carregar o tema ao carregar a página
 document.addEventListener('DOMContentLoaded', inicializarTema);
 
@@ -93,4 +111,38 @@ function copyToClipboard(event) {
   setTimeout(() => {
     event.target.classList.remove('copied');
   }, 1000);
+}
+
+// Funções da página pesquisa
+function toggleHotelFields() {
+  const hotelFields = document.getElementById("hotelFields");
+  const simularhotelCheckbox = document.getElementById("simularhotelCheckbox");
+  
+  if (simularhotelCheckbox.checked) {
+    hotelFields.style.display = "block";
+  } else {
+    hotelFields.style.display = "none";
+  }
+}
+
+function togglePassagemFields() {
+  const passagemFields = document.getElementById("passagemFields");
+  const simularpassagemCheckbox = document.getElementById("simularpassagemCheckbox");
+  
+  if (simularpassagemCheckbox.checked) {
+    passagemFields.style.display = "block";
+  } else {
+    passagemFields.style.display = "none";
+  }
+}
+
+function toggleClienteFields() {
+  const clienteFields = document.getElementById("clienteFields");
+  const clienteexistenteCheckbox = document.getElementById("clienteexistenteCheckbox");
+  
+  if (clienteexistenteCheckbox.checked) {
+    clienteFields.style.display = "block";
+  } else {
+    clienteFields.style.display = "none";
+  }
 }

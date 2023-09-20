@@ -19,7 +19,7 @@
         <div class="form-group mb-2">
           <label for="origem">Origem:</label>
           <select id="origem" name="origem">
-              <option value="">Selecione a origem</option>
+            <option value="">Selecione a origem</option>
               <option value="Acre">Acre</option>
               <option value="Alagoas">Alagoas</option>
               <option value="Amapá">Amapá</option>
@@ -70,28 +70,157 @@
         <div class="form-group mb-2">
           <label for="datachegada">Data de Chegada:</label>
           <input type="date" id="datachegada" name="datachegada">
-        </div>        
+        </div>            
         <div class="form-group mb-2">
-          <label for="pessoas">Quantidade de pessoas:</label>
-          <select id="pessoas" name="pessoas">
-            <option value="">Selecione a quantidade de pessoas</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">Mais de 7</option>
+          <label for="simularhotel">Simular Hotel</label>
+          <input type="checkbox" id="simularhotelCheckbox" name="simularhotel" onchange="toggleHotelFields()">
+        </div>
+        <div id="hotelFields" style="display: none;">
+          <div class="form-group mb-2">
+            <label for="tipoquarto">Tipo de Quarto:</label>
+            <input type="text" id="tipoquarto" name="tipoquarto">
+          </div>
+          <div class="form-group mb-2">
+            <label for="qtdequarto">Quantidade de Quartos:</label>
+            <input type="text" id="qtdequarto" name="qtdequarto">
+          </div>
+          <div class="form-group mb-2">
+            <label for="precopornoite">Preço por Noite:</label>
+            <input type="text" id="precopornoite" name="precopornoite">
+          </div>
+        </div>
+        <div class="form-group mb-2">
+          <label for="simularpassagem">Simular Passagem</label>
+          <input type="checkbox" id="simularpassagemCheckbox" name="simularpassagem" onchange="togglePassagemFields()">
+        </div>
+        <div id="passagemFields" style="display: none;">
+          <div class="form-group mb-2">
+            <label for="ciaaereadestino">Cia Aérea Destino:</label>
+            <input type="text" id="ciaaereadestino" name="ciaaereadestino">
+          </div>
+          <div class="form-group mb-2">
+            <label for="voodestino">Voo Destino:</label>
+            <input type="text" id="voodestino" name="voodestino">
+          </div>
+          <div class="form-group mb-2">
+            <label for="datadestino">Data Destino:</label>
+            <input type="date" id="datadestino" name="datadestino">
+          </div>
+          <div class="form-group mb-2">
+            <label for="horadestino">Hora Destino:</label>
+            <input type="time" id="horadestino" name="horadestino">
+          </div>
+          <div class="form-group mb-2">
+            <label for="origem">Origem:</label>
+            <input type="text" id="origem" name="origem">
+          </div>
+          <div class="form-group mb-2">
+            <label for="ciaaereaorigem">Cia Aérea Origem:</label>
+            <input type="text" id="ciaaereaorigem" name="ciaaereaorigem">
+          </div>
+          <div class="form-group mb-2">
+            <label for="vooorigem">Voo Origem:</label>
+            <input type="text" id="vooorigem" name="vooorigem">
+          </div>
+          <div class="form-group mb-2">
+            <label for="dataorigem">Data Origem:</label>
+            <input type="date" id="dataorigem" name="dataorigem">
+          </div>
+          <div class="form-group mb-2">
+            <label for="horaorigem">Hora Origem:</label>
+            <input type="time" id="horaorigem" name="horaorigem">
+          </div>
+          <div class="form-group mb-2">
+            <label for="precopassagem">Preço da Passagem:</label>
+            <input type="text" id="precopassagem" name="precopassagem">
+          </div>
+        </div>
+        <div class="form-group mb-2">
+          <label for="clienteexistente">Já sou cliente</label>
+          <input type="checkbox" id="clienteexistenteCheckbox" name="clienteexistente" onchange="toggleClienteFields()">
+        </div>
+        <div id="clienteFields" style="display: none;">
+          <div class="form-group mb-2">
+            <label for="nomecliente">Nome do Cliente:</label>
+            <input type="text" id="nomecliente" name="nomecliente">
+          </div>
+          <div class="form-group mb-2">
+            <label for="rg">RG:</label>
+            <input type="text" id="rg" name="rg">
+          </div>
+          <div class="form-group mb-2">
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" name="cpf">
+          </div>
+          <div class="form-group mb-2">
+            <label for="datanascimento">Data de Nascimento:</label>
+            <input type="date" id="datanascimento" name="datanascimento">
+          </div>
+          <div class="form-group mb-2">
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco">
+          </div>
+          <div class="form-group mb-2">
+            <label for="numero">Número:</label>
+            <input type="text" id="numero" name="numero">
+          </div>
+          <div class="form-group mb-2">
+            <label for="bairro">Bairro:</label>
+            <input type="text" id="bairro" name="bairro">
+          </div>
+          <div class="form-group mb-2">
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade">
+          </div>
+          <div class="form-group mb-2">
+            <label for="estado">Estado:</label>
+          <select id="estado" name="estado">
+            <option value="">Selecione o Estado</option>
+              <option value="Acre">Acre</option>
+              <option value="Alagoas">Alagoas</option>
+              <option value="Amapá">Amapá</option>
+              <option value="Amazonas">Amazonas</option>
+              <option value="Bahia">Bahia</option>
+              <option value="Ceará">Ceará</option>
+              <option value="Distrito Federal">Distrito Federal</option>
+              <option value="Espírito Santo">Espírito Santo</option>
+              <option value="Goiás">Goiás</option>
+              <option value="Maranhão">Maranhão</option>
+              <option value="Mato Grosso">Mato Grosso</option>
+              <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+              <option value="Minas Gerais">Minas Gerais</option>
+              <option value="Pará">Pará</option>
+              <option value="Paraíba">Paraíba</option>
+              <option value="Paraná">Paraná</option>
+              <option value="Pernambuco">Pernambuco</option>
+              <option value="Piauí">Piauí</option>
+              <option value="Rio de Janeiro">Rio de Janeiro</option>
+              <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+              <option value="Rio Grande do Norte">Rio Grande do Norte</option>
+              <option value="Rondônia">Rondônia</option>
+              <option value="Roraima">Roraima</option>
+              <option value="Santa Catarina">Santa Catarina</option>
+              <option value="São Paulo">São Paulo</option>
+              <option value="Sergipe">Sergipe</option>
+              <option value="Tocantins">Tocantins</option>
           </select>
         </div>
-        <div class="form-group">
-          <label for="cupom">Cupom de desconto:</label>
-          <input type="text" id="cupom" name="cupom" placeholder="Digite o cupom">
+          <div class="form-group mb-2">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email">
+          </div>
+          <div class="form-group mb-2">
+            <label for="celular">Celular:</label>
+            <input type="text" id="celular" name="celular">
+          </div>
+          <div class="form-group mb-2">
+            <label for="whatsapp">WhatsApp:</label>
+            <input type="checkbox" id="whatsapp" name="whatsapp">
+          </div>
+        </div>
         <div class="form-group text-center">
           <button type="submit" class="btn btn-primary">Pesquisar</button>
         </div>
-        </div>          
       </form>
     </div>
   </div>    
