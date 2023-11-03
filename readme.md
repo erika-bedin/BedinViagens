@@ -1,19 +1,11 @@
-👩🏼‍💻*Módulo 3 - Desenvolvimento de Sistemas - Nível 1 - Recode Pro*👩🏼‍💻
-Projeto desenvolvido para conclusão da atividade prática do módulo 3 do curso de FullStack.
+👩🏼‍💻*Entrega 4 - Desenvolvimento de Sistemas - Nível 2 - Recode Pro*👩🏼‍💻
+Projeto desenvolvido para conclusão da atividade prática do módulo 4 do curso de FullStack.
 
-*Detalhes:*
-Nesta atividade, vamos dar continuidade à criação do site para a agência de viagens (melhorar o layout do modelo anterior). Nesta entrega, contemple uma estrutura de layout com um menu horizontal na parte superior de todas as páginas: HOME, DESTINOS, PROMOCOES, CONTATO usando <tags> semânticas e deixando o site totalmente responsivo usando Bootstrap. Vamos dar início a modelagem de nosso banco de dados e a estrutura de classes de nosso sistema usando UML e JAVA. 
-
-*Modelagem de dados:*
--Criar o modelo conceitual e lógico do banco de dados, usando uma ferramenta de modelagem de dados (BRmodelo) 
--Criar as relações e cardinalidades entre as tabelas do modelo do banco
--Criar o modelo físico (tabelas e relações) usando SQL
--Criar o modelo do sistema (Classes) em UML e Java  
+*Banco de dados:*
+-Ajustes no modelo lógico do banco de dados (Tabelas, atributos e relacionamentos) se houver necessidades, implementar o banco de dados no Mysql de forma manual ou usando o ORM (Object-Relational Mapping ou em português mapeamento objeto-relacional).   
 
 *Back-end* 
--Usando os conceitos da orientação a objetos em Java, criar um projeto do tipo console da agencia de viagens, aplicando o CRUD (Create, Read, Update, Delete) para todas as tabelas de seu modelo de banco de dados 
--Para a atividade vamos usar classes Java, JDBC e MySql 
+-Construir o back-end usando tecnologias Java (Estrutura de dados Classes), conexão com MySql usando o padrão de projeto MVC (Implementado o CRUD básico para todas as tabelas do modelo de dados).  
 
 *Front-end* 
--Atualizar a versão anterior do site, refatorando se preciso as páginas: Home, Destino, Promoções, Contato e as demais de acordo com seu modelo de dados usando HTML, CSS Bootstrap. 
--Faça as formatações de acordo com a paleta de cores escolhida. 
+-Criar uma nova versão do site usando o padrão de projeto MVC (Model, View, Controller (Conectar todas as telas de cadastro ao banco de dados usando o padrão de projetos MVC).
